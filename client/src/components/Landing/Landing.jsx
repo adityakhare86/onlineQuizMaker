@@ -1,5 +1,4 @@
 import React from "react";
-import DemoButton from "./DemoButton";
 import Icon from "../Layout/Icon";
 import NavBar from "../Layout/NavBar";
 
@@ -22,7 +21,6 @@ const Landing = (props) => {
           analyze statistics in a convenient way.
         </div>
         <div className="mt-5" style={{ textAlign: "center" }}>
-          <DemoButton />
         </div>
       </div>
     </React.Fragment>
