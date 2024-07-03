@@ -11,15 +11,8 @@ const QuizzerController = {
       name: Joi.string().required(),
       email: Joi.string().email().required(),
     });
-    // console.log("User", { _id, name, email });
-    // console.log("Schema", quizzerSchema);
 
     try {
-      // validating given data
-      // const { error } = quizzerSchema.validate({ _id, name, email });
-      // if (error)
-      //   return res.status(400).send("[validation error] Invalid data given.");
-
       // create Quizzer
       const quizzer = new Quizzer({
         _id: _id,
@@ -27,6 +20,7 @@ const QuizzerController = {
         email: email,
       });
       const savedQuizzer = await quizzer.save();
+      console.log("Quizzer created !!!!!!!");
       return res.status(200).send(savedQuizzer);
     } catch (err) {
       console.log("Error", err);

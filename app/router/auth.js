@@ -14,9 +14,11 @@ router.post("/login", async (req, res, next) => {
 
 // register new user
 router.post("/registration", async (req, res, next) => {
-  req.body = await AuthController.registerUser(req, res, next);
-  // creating the quizzer profile
-  await QuizzerController.createQuizzer(req, res, next);
+  const user = await AuthController.registerUser(req, res, next);
+  if (user) {
+    req.body = user;
+    await QuizzerController.createQuizzer(req, res, next);
+  }
 });
 
 module.exports = router;

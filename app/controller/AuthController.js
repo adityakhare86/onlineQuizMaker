@@ -36,9 +36,9 @@ const AuthController = {
         password: hashedPass,
       });
       const savedUser = await user.save();
-
+      const { _id } = savedUser;
       // send a successful response
-      res.status(201).send(savedUser);
+      return { _id, name, email }; // return user details instead of modifying req.body
     } catch (err) {
       console.error(err);
       return res.status(400).send("Invalid data given.");
