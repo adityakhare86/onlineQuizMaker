@@ -172,9 +172,6 @@ class QuizBuilder extends Component {
                     Quiz Type
                   </option>
                   <option value="AMATEUR">Amateur</option>
-                  <option value="TIME_TRIAL" disabled>
-                    Time Trial (Pro)
-                  </option>
                 </select>
               </div>
             </div>
