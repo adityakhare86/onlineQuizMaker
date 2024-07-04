@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavBar from "../Layout/NavBar";
 import { Redirect } from "react-router-dom";
 import QuizQuestion from "./QuizQuestion";
-import Emoji from "../Layout/Emoji";
 import QuizService from "../../service/QuizService";
 
 class QuizTaker extends Component {
