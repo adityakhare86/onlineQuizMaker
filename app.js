@@ -26,5 +26,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || 5000, () =>
-  console.log("QuizDen server is up!")
+  console.log("QuizCraft server is up!")
 );

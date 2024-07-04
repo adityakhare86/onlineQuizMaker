@@ -1,19 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 
 :root {
-  --quizden-light-purple: #c7c7fc;
-  --quizden-dark-purple: #8e8cfc;
-  --quizden-deep-purple: #6464fc;
-  --quizden-darker-purple: #3a3ac7;
-  --quizden-bg-dark: #040404;
-  --quizden-light: #f2f2f2;
+  --quizcraft-light-purple: #c7c7fc;
+  --quizcraft-dark-purple: #8e8cfc;
+  --quizcraft-deep-purple: #6464fc;
+  --quizcraft-darker-purple: #3a3ac7;
+  --quizcraft-bg-dark: #040404;
+  --quizcraft-light: #f2f2f2;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,7 +35,7 @@
 .button {
   font-family: "Lexend Deca", sans-serif;
   font-size: medium;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   background: none;
   border: none;
 }
@@ -48,16 +45,16 @@
   height: 36px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizden-bg-dark);
+  background-color: var(--quizcraft-bg-dark);
 }
 .login-button:hover {
-  color: var(--quizden-bg-dark);
-  background-color: var(--quizden-light);
+  color: var(--quizcraft-bg-dark);
+  background-color: var(--quizcraft-light);
 }
 .login-button:active {
-  color: var(--quizden-light);
-  border: 2px solid var(--quizden-light);
-  background-color: var(--quizden-bg-dark);
+  color: var(--quizcraft-light);
+  border: 2px solid var(--quizcraft-light);
+  background-color: var(--quizcraft-bg-dark);
 }
 
 .register-button {
@@ -65,15 +62,15 @@
   height: 36px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
 }
 
 .register-button:hover {
-  background-color: var(--quizden-dark-purple);
+  background-color: var(--quizcraft-dark-purple);
 }
 .register-button:active {
-  border: 2px solid var(--quizden-deep-purple);
-  background-color: var(--quizden-bg-dark);
+  border: 2px solid var(--quizcraft-deep-purple);
+  background-color: var(--quizcraft-bg-dark);
 }
 
 .jumbo {
@@ -81,12 +78,12 @@
   font-size: 3em;
   text-align: center;
   margin-top: 2vh;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
 }
 
 .jumbo-subtitle {
   text-align: center;
-  color: var(--quizden-light-purple);
+  color: var(--quizcraft-light-purple);
   font-size: larger;
 }
 
@@ -95,45 +92,45 @@
   height: 48px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
 }
 
 .demo-button:hover {
-  border: 2px solid var(--quizden-deep-purple);
+  border: 2px solid var(--quizcraft-deep-purple);
   background: none;
 }
 
 .demo-button:active {
-  border: 2px solid var(--quizden-deep-purple);
-  background-color: var(--quizden-light);
-  color: var(--quizden-bg-dark);
+  border: 2px solid var(--quizcraft-deep-purple);
+  background-color: var(--quizcraft-light);
+  color: var(--quizcraft-bg-dark);
 }
 
 .back-to-home {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  color: var(--quizden-light-purple);
+  color: var(--quizcraft-light-purple);
   text-decoration-line: underline;
 }
 
 .auth-title {
   font-family: "Lexend Deca", sans-serif;
   font-size: 2em;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
 }
 
 .input-label {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
 }
 
 .input-field {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: var(--quizden-bg-dark);
-  /* background-color: var(--quizden-light-purple); */
+  color: var(--quizcraft-bg-dark);
+  /* background-color: var(--quizcraft-light-purple); */
   border: none;
 }
 
@@ -147,7 +144,7 @@
   height: 42px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
 }
 
 .logout-button {
@@ -155,30 +152,30 @@
   height: 36px;
   border-radius: 8px;
   border-style: none;
-  color: var(--quizden-bg-dark);
-  background-color: var(--quizden-light);
+  color: var(--quizcraft-bg-dark);
+  background-color: var(--quizcraft-light);
 }
 
 .logout-button:hover {
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   background-color: crimson;
 }
 
 .logout-button:active {
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border: 2px solid crimson;
-  background-color: var(--quizden-bg-dark);
+  background-color: var(--quizcraft-bg-dark);
 }
 
 .section {
-  background-color: var(--quizden-light);
+  background-color: var(--quizcraft-light);
   border-radius: 4px;
   padding: 26px;
   box-shadow: 6px 6px #6464fc;
 }
 
 .profile-name {
-  color: var(--quizden-bg-dark);
+  color: var(--quizcraft-bg-dark);
   font-family: "Lexend Deca", sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -194,7 +191,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: var(--quizden-deep-purple);
+  color: var(--quizcraft-deep-purple);
   margin-top: 10px;
 }
 
@@ -203,28 +200,13 @@
   font-size: 24px;
 }
 
-.tools {
-}
-
-/* .tool-button {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 18px;
-  color: var(--quizden-light);
-  border-radius: 4px;
-  border-style: none;
-  background-color: var(--quizden-darker-purple);
-  width: 180px;
-  height: 60px;
-  margin-left: 16px;
-} */
-
 .tool-button {
   font-family: "Lexend Deca", sans-serif;
   font-size: 18px;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border-radius: 4px;
   border-style: none;
-  background-color: var(--quizden-darker-purple);
+  background-color: var(--quizcraft-darker-purple);
   width: max-content;
   height: max-content;
   margin-top: 10px;
@@ -241,7 +223,7 @@
 }
 
 .tool-button:active {
-  background-color: var(--quizden-bg-dark);
+  background-color: var(--quizcraft-bg-dark);
 }
 
 .grayed {
@@ -264,7 +246,7 @@
 }
 
 .tooltip-wrapper .tool-tip {
-  background-color: var(--quizden-light);
+  background-color: var(--quizcraft-light);
   padding: 16px;
   width: 240px;
   z-index: 1;
@@ -290,12 +272,12 @@
 }
 
 .input-quiz-title:hover {
-  border-bottom: 2px solid var(--quizden-bg-dark);
+  border-bottom: 2px solid var(--quizcraft-bg-dark);
 }
 
 .input-quiz-title:active,
 .input-quiz-title:focus {
-  border-bottom: 2px solid var(--quizden-deep-purple);
+  border-bottom: 2px solid var(--quizcraft-deep-purple);
 }
 
 .input-quiz-desc {
@@ -305,12 +287,12 @@
 }
 
 .input-quiz-desc:hover {
-  border-bottom: 2px solid var(--quizden-bg-dark);
+  border-bottom: 2px solid var(--quizcraft-bg-dark);
 }
 
 .input-quiz-desc:active,
 .input-quiz-desc:focus {
-  border-bottom: 2px solid var(--quizden-deep-purple);
+  border-bottom: 2px solid var(--quizcraft-deep-purple);
 }
 
 input:focus,
@@ -327,12 +309,12 @@ button:focus {
 }
 
 .input-question-title:hover {
-  border-bottom: 2px solid var(--quizden-bg-dark);
+  border-bottom: 2px solid var(--quizcraft-bg-dark);
 }
 
 .input-question-title:active,
 .input-question-title:focus {
-  border-bottom: 2px solid var(--quizden-deep-purple);
+  border-bottom: 2px solid var(--quizcraft-deep-purple);
 }
 
 .option-name {
@@ -344,7 +326,7 @@ button:focus {
   font-family: "Lexend Deca", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: var(--quizden-darker-purple);
+  color: var(--quizcraft-darker-purple);
   background: none;
   border: none;
   width: 10em;
@@ -358,7 +340,7 @@ button:focus {
   font-family: "Lexend Deca", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: var(--quizden-darker-purple);
+  color: var(--quizcraft-darker-purple);
   background: none;
   border: none;
   margin-top: 8px;
@@ -369,7 +351,7 @@ button:focus {
   background: none;
   letter-spacing: 0.03em;
   border: none;
-  border-bottom: 2px solid var(--quizden-light-purple);
+  border-bottom: 2px solid var(--quizcraft-light-purple);
   width: calc(44vw);
   margin-left: 1em;
   margin-right: 1em;
@@ -379,17 +361,17 @@ button:focus {
 .option-input:hover,
 .option-input:active,
 .option-input:focus {
-  border-bottom: 2px solid var(--quizden-dark-purple);
+  border-bottom: 2px solid var(--quizcraft-dark-purple);
 }
 
 .remove-button {
   width: max-content;
   height: max-content;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
@@ -404,21 +386,21 @@ button:focus {
 .add-button {
   width: max-content;
   height: max-content;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
 }
 
 .add-button:hover {
-  background-color: var(--quizden-darker-purple);
+  background-color: var(--quizcraft-darker-purple);
 }
 .add-button:active {
-  background-color: var(--quizden-bg-dark);
+  background-color: var(--quizcraft-bg-dark);
 }
 
 .remove-option-button {
@@ -440,11 +422,11 @@ button:focus {
 .select-answer-dropdown {
   width: 8em;
   height: max-content;
-  background-color: var(--quizden-deep-purple);
+  background-color: var(--quizcraft-deep-purple);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
@@ -470,7 +452,7 @@ table {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  color: var(--quizden-light);
+  color: var(--quizcraft-light);
   border-radius: 4px;
   border-style: none;
   background-color: #443e47;

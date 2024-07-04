@@ -1,14 +1,10 @@
-# QuizDen
+# QuizCraft
 
 ![qq](https://user-images.githubusercontent.com/14056189/90792874-d92ea380-e32c-11ea-855d-0c604f2ea20b.PNG)
 
 ## Introduction
 
 A simple and minimalist quiz building and participating application. After building quiz, a quiz code will be generated for sharing. User can participate in the quiz with this code.
-
-#### Live Demo: http://quizden-app.herokuapp.com/
-
-![ezgif-7-58076e634990](https://user-images.githubusercontent.com/14056189/90800244-3c710380-e336-11ea-9747-56e2b2a7b627.gif)
 
 ## Technologies Used
 

@@ -3,8 +3,8 @@ require("dotenv").config();
 
 const QuizService = {
   submit: async (request) => {
-    const user_id = sessionStorage.getItem("quizden-user-id");
-    const authToken = sessionStorage.getItem("quizden-authToken");
+    const user_id = sessionStorage.getItem("quizcraft-user-id");
+    const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
       .post("/api/v1/quizzes/create/" + user_id, request, {
         headers: {
@@ -19,7 +19,7 @@ const QuizService = {
       });
   },
   findByUser: async (user_id) => {
-    const authToken = sessionStorage.getItem("quizden-authToken");
+    const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
       .get("/api/v1/quizzes/quizzer/" + user_id, {
         headers: {
@@ -34,7 +34,7 @@ const QuizService = {
       });
   },
   findById: async (quiz_id) => {
-    const authToken = sessionStorage.getItem("quizden-authToken");
+    const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
       .get("/api/v1/quizzes/" + quiz_id, {
         headers: {
@@ -49,8 +49,8 @@ const QuizService = {
       });
   },
   submitAnswer: async (request) => {
-    const user_id = sessionStorage.getItem("quizden-user-id");
-    const authToken = sessionStorage.getItem("quizden-authToken");
+    const user_id = sessionStorage.getItem("quizcraft-user-id");
+    const authToken = sessionStorage.getItem("quizcraft-authToken");
     const uri = "/api/v1/quizzes/submit/" + user_id;
     return await axios
       .post(uri, request, {

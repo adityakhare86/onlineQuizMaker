@@ -17,7 +17,7 @@ const AuthService = {
       .post("/api/v1/auth/login", request)
       .then((response) => {
         const authToken = response.headers["auth-token"];
-        sessionStorage.setItem("quizden-token", authToken);
+        sessionStorage.setItem("quizcraft-token", authToken);
         return { ...response.data, authToken };
       })
       .catch((err) => {

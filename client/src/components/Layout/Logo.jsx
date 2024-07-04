@@ -9,13 +9,13 @@ const Logo = () => {
         style={{
           fontFamily: `'Lexend Deca', sans-serif`,
           fontSize: "24px",
-          color: "var(--quizden-light)",
+          color: "var(--quizcraft-light)",
           display: "inline-block",
           verticalAlign: "middle",
           paddingLeft: "8px",
         }}
       >
-        QuizDen
+        QuizCraft
       </span>
     </React.Fragment>
   );

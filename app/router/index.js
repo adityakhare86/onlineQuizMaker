@@ -11,7 +11,7 @@ const quiz = require("./quiz");
 const api_uri = process.env.API_URI;
 
 router.get("/", (req, res) => {
-  res.send("Hello to QuizDen Backend System");
+  res.send("Hello to QuizCraft Backend System");
 });
 
 // connect to database

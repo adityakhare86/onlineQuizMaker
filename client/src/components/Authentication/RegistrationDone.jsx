@@ -17,7 +17,7 @@ const RegistrationDone = (props) => {
             style={{
               fontFamily: `'Lexend Deca', sans-serif`,
               fontSize: "36px",
-              color: "var(--quizden-light)",
+              color: "var(--quizcraft-light)",
               marginTop: "30vh",
               textAlign: "center",
             }}
@@ -25,7 +25,7 @@ const RegistrationDone = (props) => {
             Congratulations! You are now a{" "}
             <span
               style={{
-                color: "var(--quizden-dark-purple)",
+                color: "var(--quizcraft-dark-purple)",
               }}
             >
               Quizzer

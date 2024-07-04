@@ -17,8 +17,8 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    const authToken = sessionStorage.getItem("quizden-authToken");
-    const user_id = sessionStorage.getItem("quizden-user-id");
+    const authToken = sessionStorage.getItem("quizcraft-authToken");
+    const user_id = sessionStorage.getItem("quizcraft-user-id");
 
     // get Quizzer profile
     QuizzerService.getQuizzer(user_id, authToken).then((response) => {
@@ -31,7 +31,7 @@ class Dashboard extends Component {
   }
 
   getQuizzes = () => {
-    const user_id = sessionStorage.getItem("quizden-user-id");
+    const user_id = sessionStorage.getItem("quizcraft-user-id");
     QuizService.findByUser(user_id).then((response) => {
       if (response === false) {
       } else {
@@ -66,7 +66,6 @@ class Dashboard extends Component {
             <Tools
               classes="col-sm-6 ml-4 section tools"
               title="Quizzer Tools"
-              subtitle="Some tools may only be available in Pro License"
             />
             {/* Tools section  end*/}
           </div>

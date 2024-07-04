@@ -21,7 +21,7 @@ const QuizTaken = (props) => {
             style={{
               fontFamily: `'Lexend Deca', sans-serif`,
               fontSize: "36px",
-              color: "var(--quizden-light)",
+              color: "var(--quizcraft-light)",
               marginTop: "30vh",
               textAlign: "center",
             }}
@@ -29,7 +29,7 @@ const QuizTaken = (props) => {
             You solved {quiz.solved} out of {quiz.total_questions}!!!
             {/* <span
               style={{
-                color: "var(--quizden-dark-purple)",
+                color: "var(--quizcraft-dark-purple)",
               }}
             >
               Quizzer
@@ -42,7 +42,7 @@ const QuizTaken = (props) => {
             style={{
               fontFamily: `'Roboto', sans-serif`,
               fontSize: "18px",
-              color: "var(--quizden-light-purple)",
+              color: "var(--quizcraft-light-purple)",
               textAlign: "center",
             }}
           >
@@ -60,13 +60,13 @@ const QuizTaken = (props) => {
               style={{
                 fontFamily: `'Lexend Deca', sans-serif`,
                 fontSize: "22px",
-                color: "var(--quizden-deep-purple)",
+                color: "var(--quizcraft-deep-purple)",
                 padding: "1.4em",
-                border: "2px solid var(--quizden-dark-purple)",
+                border: "2px solid var(--quizcraft-dark-purple)",
                 borderRadius: "12px",
                 margin: "auto",
                 width: "fit-content",
-                backgroundColor: "var(--quizden-light)",
+                backgroundColor: "var(--quizcraft-light)",
               }}
             >
               BLA BLA

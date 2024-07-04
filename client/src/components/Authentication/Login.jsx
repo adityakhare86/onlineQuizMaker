@@ -30,8 +30,8 @@ class Login extends Component {
       if (response === false) {
         this.setState({ error: true });
       } else {
-        sessionStorage.setItem("quizden-authToken", response.authToken);
-        sessionStorage.setItem("quizden-user-id", response._id);
+        sessionStorage.setItem("quizcraft-authToken", response.authToken);
+        sessionStorage.setItem("quizcraft-user-id", response._id);
 
         // get Quizzer profile
         QuizzerService.getQuizzer(response._id, response.authToken).then(
