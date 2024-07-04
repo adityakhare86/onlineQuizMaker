@@ -59,9 +59,6 @@ class Registration extends Component {
             <div className="col-sm-8 offset-sm-4 mt-5">
               <Link to="/">
                 <span className="back-to-home ">
-                  <span role="img" aria-label="man-walking">
-                    🚶
-                  </span>{" "}
                   Back to Home
                 </span>
               </Link>
@@ -147,9 +144,6 @@ class Registration extends Component {
                 <div className="col-sm-2">
                   <Link to="/login">
                     <div className="back-to-home mt-2">
-                      <span role="img" aria-label="man-walking">
-                        🚶
-                      </span>{" "}
                       Already Registered? Login
                     </div>
                   </Link>

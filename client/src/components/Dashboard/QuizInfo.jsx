@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Emoji from "../Layout/Emoji";
 import DateUtil from "../../Utils/DateUtil";
 
 const QuizInfo = (props) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(props.id).then(() => {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 2000); 
+    });
+  };
+
   return (
     <React.Fragment>
       <tr style={{}}>
@@ -49,16 +60,36 @@ const QuizInfo = (props) => {
             fontFamily: `"Lexend Deca", sans-serif`,
             fontSize: "14px",
             fontWeight: "bold",
+            position: "relative", 
           }}
         >
           <span
             style={{
               margin: "8px",
+              cursor: "pointer", 
             }}
+            onClick={copyToClipboard} 
           >
             <Emoji emoji="🧲" />
           </span>
           {props.id}
+          {showPopup && (
+            <div
+              style={{
+                position: "absolute",
+                top: "-20px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                backgroundColor: "black",
+                color: "white",
+                padding: "5px 10px",
+                borderRadius: "5px",
+                fontSize: "12px",
+              }}
+            >
+              Code copied to your clipboard.
+            </div>
+          )}
         </td>
       </tr>
     </React.Fragment>

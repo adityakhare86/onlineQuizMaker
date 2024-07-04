@@ -22,15 +22,15 @@ const RegistrationDone = (props) => {
               textAlign: "center",
             }}
           >
-            Congratulations! You are now a{" "}
+            Congratulations! You are now a {" "}
             <span
               style={{
                 color: "var(--quizcraft-dark-purple)",
               }}
             >
-              Quizzer
+              QuizCrafter
             </span>
-            !
+            .
           </div>
         </div>
         <div className="row">
@@ -42,9 +42,6 @@ const RegistrationDone = (props) => {
           >
             <Link to="/login">
               <span className="back-to-home ">
-                <span role="img" aria-label="man-walking">
-                  🚶
-                </span>{" "}
                 Go to Login
               </span>
             </Link>

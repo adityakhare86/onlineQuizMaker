@@ -17,9 +17,8 @@ const Tools = (props) => {
               </button>
             </Link>
             <ToolTip
-              emoji="🪓"
-              title="Make them suffer!"
-              description="Unleash thou wrath unto them poor souls!"
+              title="Create a new quiz!"
+              description="Design and build a custom quiz for your audience."
             />
           </div>
         </div>
@@ -31,9 +30,8 @@ const Tools = (props) => {
               </button>
             </Link>
             <ToolTip
-              emoji="⚰️"
-              title="You will not survive!"
-              description="Some fates are worse than death!"
+              title="Test your knowledge!"
+              description="You need to have a quiz code to be able to attend a quiz."
             />
           </div>
         </div>

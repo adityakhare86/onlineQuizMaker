@@ -65,9 +65,6 @@ class Login extends Component {
             <div className="col-sm-8 offset-sm-4 mt-5">
               <Link to="/">
                 <span className="back-to-home">
-                  <span role="img" aria-label="man-walking">
-                    🚶
-                  </span>{" "}
                   Back to Home
                 </span>
               </Link>
@@ -134,9 +131,6 @@ class Login extends Component {
                 <div className="col-sm-2">
                   <Link to="/registration">
                     <div className="back-to-home mt-2">
-                      <span role="img" aria-label="man-walking">
-                        🚶
-                      </span>{" "}
                       New user? Register here
                     </div>
                   </Link>
