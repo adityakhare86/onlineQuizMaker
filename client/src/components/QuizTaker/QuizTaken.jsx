@@ -4,9 +4,6 @@ import { Link, Redirect } from "react-router-dom";
 
 const QuizTaken = (props) => {
   const { quiz } = props.location.state;
-  //   if (!props.quiz) {
-  //     return <Redirect to={{ pathname: "/dashboard" }} />;
-  //   }
   return (
     <React.Fragment>
       <NavBar
@@ -26,14 +23,7 @@ const QuizTaken = (props) => {
               textAlign: "center",
             }}
           >
-            You solved {quiz.solved} out of {quiz.total_questions}!!!
-            {/* <span
-              style={{
-                color: "var(--quizcraft-dark-purple)",
-              }}
-            >
-              Quizzer
-            </span> */}
+            You solved {quiz.solved} out of {quiz.total_questions}.
           </div>
         </div>
         <div className="row pt-3">
@@ -46,33 +36,9 @@ const QuizTaken = (props) => {
               textAlign: "center",
             }}
           >
-            Don't cry because it is over, smile because it happened!
+            Your response has been successfully submitted.
           </div>
         </div>
-        {/* <div className="row mt-5">
-          <div
-            className="col-sm-12"
-            style={{
-              textAlign: "center",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: `'Lexend Deca', sans-serif`,
-                fontSize: "22px",
-                color: "var(--quizcraft-deep-purple)",
-                padding: "1.4em",
-                border: "2px solid var(--quizcraft-dark-purple)",
-                borderRadius: "12px",
-                margin: "auto",
-                width: "fit-content",
-                backgroundColor: "var(--quizcraft-light)",
-              }}
-            >
-              BLA BLA
-            </div>
-          </div>
-        </div> */}
         <div className="row">
           <div
             className="col-sm-12 mt-5"
@@ -82,9 +48,6 @@ const QuizTaken = (props) => {
           >
             <Link to="/dashboard">
               <span className="back-to-home ">
-                <span role="img" aria-label="man-walking">
-                  🚶
-                </span>{" "}
                 Go to Dashboard
               </span>
             </Link>
