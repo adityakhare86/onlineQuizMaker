@@ -11,13 +11,13 @@ class QuizBuilder extends Component {
     this.state = {
       title: "",
       description: "",
-      type: "",
+      type: "AMATEUR",
       questions: [],
     };
   }
 
   handleResetAll = (e) => {
-    this.setState({ title: "", description: "", type: "", questions: [] });
+    this.setState({ title: "", description: "", type: "AMATEUR", questions: [] });
   };
 
   handleTitleChange = (e) => {
@@ -28,14 +28,9 @@ class QuizBuilder extends Component {
     this.setState({ description: e.target.value });
   };
 
-  handleTypeChange = (e) => {
-    this.setState({ type: e.target.value });
-  };
-
   handleAddQuestion = (e) => {
     const { questions } = this.state;
-    const id =
-      questions.length === 0 ? 0 : questions[questions.length - 1].id + 1;
+    const id = questions.length === 0 ? 0 : questions[questions.length - 1].id + 1;
     const title = "";
     const options = [];
     const answer = Number(0);
@@ -49,7 +44,6 @@ class QuizBuilder extends Component {
     return { id, title, answer, options };
   };
 
-  // question form control
   handleQuestionTitleChange = (id, value) => {
     const { questions } = this.state;
     const index = questions.findIndex((question) => question.id === id);
@@ -71,8 +65,7 @@ class QuizBuilder extends Component {
     const index = questions.findIndex((question) => question.id === q_id);
     const question = { ...questions[index] };
     const { options } = question;
-    const opt_id =
-      options.length === 0 ? 0 : options[options.length - 1].id + 1;
+    const opt_id = options.length === 0 ? 0 : options[options.length - 1].id + 1;
     const option = { id: opt_id, value: "" };
     options.push(option);
     question.options = [...options];
@@ -81,7 +74,6 @@ class QuizBuilder extends Component {
   };
 
   handleOptionChange = (q_id, opt_id, value) => {
-    // console.log(q_id, opt_id, value);
     const { questions } = this.state;
     const index = questions.findIndex((question) => question.id === q_id);
     const question = { ...questions[index] };
@@ -94,12 +86,10 @@ class QuizBuilder extends Component {
   };
 
   handleRemoveOption = (q_id, opt_id) => {
-    // console.log("Question", q_id, "Option", opt_id);
     const { questions } = this.state;
     const index = questions.findIndex((question) => question.id === q_id);
     const question = { ...questions[index] };
     const { options } = question;
-    // const newOptions = options.filter((option) => option.id !== opt_id);
     const newOptions = [];
     let counter = 0;
     for (let i = 0; i < options.length; i++) {
@@ -162,18 +152,6 @@ class QuizBuilder extends Component {
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
               />
-              <div className="row mt-5 pl-3">
-                <select
-                  className="option-dropdown"
-                  value={this.state.type}
-                  onChange={this.handleTypeChange}
-                >
-                  <option value="" disabled hidden>
-                    Quiz Type
-                  </option>
-                  <option value="AMATEUR">Amateur</option>
-                </select>
-              </div>
             </div>
           </div>
           <div className="row mt-5">
