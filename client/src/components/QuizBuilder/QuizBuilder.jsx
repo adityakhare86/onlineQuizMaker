@@ -13,19 +13,20 @@ class QuizBuilder extends Component {
       description: "",
       type: "AMATEUR",
       questions: [],
+      errorMessage: "",  // add error message state
     };
   }
 
   handleResetAll = (e) => {
-    this.setState({ title: "", description: "", type: "AMATEUR", questions: [] });
+    this.setState({ title: "", description: "", type: "AMATEUR", questions: [], errorMessage: "" });
   };
 
   handleTitleChange = (e) => {
-    this.setState({ title: e.target.value });
+    this.setState({ title: e.target.value, errorMessage: "" });
   };
 
   handleDescriptionChange = (e) => {
-    this.setState({ description: e.target.value });
+    this.setState({ description: e.target.value, errorMessage: "" });
   };
 
   handleAddQuestion = (e) => {
@@ -33,9 +34,9 @@ class QuizBuilder extends Component {
     const id = questions.length === 0 ? 0 : questions[questions.length - 1].id + 1;
     const title = "";
     const options = [];
-    const answer = Number(0);
+    const answer = null;  // change default answer to null
     questions.push({ id, title, options, answer });
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   copyQuestion = (question) => {
@@ -48,7 +49,7 @@ class QuizBuilder extends Component {
     const { questions } = this.state;
     const index = questions.findIndex((question) => question.id === id);
     questions[index].title = value;
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   handleQuestionAnswerChange = (id, value) => {};
@@ -57,7 +58,7 @@ class QuizBuilder extends Component {
     const newQuestions = this.state.questions.filter(
       (question) => question.id !== id
     );
-    this.setState({ questions: [...newQuestions] });
+    this.setState({ questions: [...newQuestions], errorMessage: "" });
   };
 
   handleQuestionAddOption = (q_id) => {
@@ -70,7 +71,7 @@ class QuizBuilder extends Component {
     options.push(option);
     question.options = [...options];
     questions[index] = { ...question };
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   handleOptionChange = (q_id, opt_id, value) => {
@@ -82,7 +83,7 @@ class QuizBuilder extends Component {
     options[option_index].value = value;
     question.options = [...options];
     questions[index] = { ...question };
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   handleRemoveOption = (q_id, opt_id) => {
@@ -100,7 +101,7 @@ class QuizBuilder extends Component {
     }
     question.options = [...newOptions];
     questions[index] = { ...question };
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   handleSelectAnswer = (q_id, opt_id) => {
@@ -109,13 +110,26 @@ class QuizBuilder extends Component {
     const question = { ...questions[index] };
     question.answer = opt_id;
     questions[index] = { ...question };
-    this.setState({ questions: questions });
+    this.setState({ questions: questions, errorMessage: "" });
   };
 
   handleSubmitQuiz = () => {
+    const { questions } = this.state;
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      if (question.options.length === 0) {
+        this.setState({ errorMessage: `Question ${i + 1} has no options.` });
+        return;
+      }
+      if (question.answer === null) {
+        this.setState({ errorMessage: `Question ${i + 1} has no selected answer.` });
+        return;
+      }
+    }
+
     QuizService.submit(this.state).then((response) => {
       if (response === false) {
-        // if the quiz is invalid
+        this.setState({ errorMessage: "Failed to submit the quiz." });
       } else {
         const { _id } = response;
         this.props.history.push({
@@ -188,6 +202,13 @@ class QuizBuilder extends Component {
               </button>
             </div>
           </div>
+          {this.state.errorMessage && (
+            <div className="row mt-4">
+              <div className="col-sm-8 offset-sm-2 alert alert-danger">
+                {this.state.errorMessage}
+              </div>
+            </div>
+          )}
         </div>
       </React.Fragment>
     );

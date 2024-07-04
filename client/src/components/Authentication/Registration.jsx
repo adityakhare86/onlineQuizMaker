@@ -89,7 +89,6 @@ class Registration extends Component {
                 </div>
               </div>
 
-              {/* email */}
               <div className="row mt-4">
                 <div className="col-sm-4 offset-sm-4">
                   <label className="input-label" htmlFor="inputEmail">
@@ -107,11 +106,9 @@ class Registration extends Component {
                 </div>
               </div>
 
-              {/* password */}
               <div className="row mt-4">
                 <div
                   className="col-sm-4 offset-sm-4"
-                  //   style={{ backgroundColor: "red" }}
                 >
                   <label className="input-label" htmlFor="inputPassword">
                     Password
