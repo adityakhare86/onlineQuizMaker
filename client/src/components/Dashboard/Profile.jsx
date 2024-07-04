@@ -15,7 +15,7 @@ const Profile = (props) => {
             <CountBox title="Quizzes Attended" number={props.attended} />
           </div>
           <div className="col-sm-4">
-            <CountBox title="Flawless Quiz" number={props.flawless} />
+            <CountBox title="Perfect Scores" number={props.flawless} />
           </div>
         </div>
       </div>

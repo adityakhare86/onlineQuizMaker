@@ -76,6 +76,6 @@ User can take the quiz after finding it using the code. Similar to the building 
 
 ## Quiz Result
 
-User will see this page after taking a quiz successfully. The attendance count will increase by one. And the flawless count will be increased by one if they answer all correctly.
+User will see this page after taking a quiz successfully. The attendance count will increase by one. And the perfect score count will be increased by one if they answer all correctly.
 
 ![image](https://user-images.githubusercontent.com/14056189/90799678-61b14200-e335-11ea-95a9-420f9b10c796.png)
