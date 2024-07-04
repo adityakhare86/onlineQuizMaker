@@ -1,5 +1,5 @@
 import React from "react";
-import QuizCraftLogo from "../../assets/Logo.svg";
+import QuizCraftLogo from "../../assets/logo.png";
 
 const Icon = (props) => {
   return (
