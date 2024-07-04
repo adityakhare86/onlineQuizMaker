@@ -73,17 +73,6 @@ class QuizTaker extends Component {
             <div className="col-sm-8 offset-sm-2 section">
               <div className="profile-name">{quiz.title}</div>
               <div className="profile-email">{quiz.description}</div>
-              <div
-                className="option-dropdown pt-4"
-                style={{
-                  width: "max-content",
-                }}
-              >
-                <span style={{ color: "var(--quizcraft-bg-dark)" }}>
-                  Quiz Type:{" "}
-                </span>
-                {quiz.type}
-              </div>
             </div>
           </div>
 
@@ -93,12 +82,6 @@ class QuizTaker extends Component {
                 key={question.id}
                 question={question}
                 onSelectAnswer={this.handleSelectAnswer}
-                //   onTitleChange={this.handleQuestionTitleChange}
-                //   onRemove={this.handleRemoveQuestion}
-                //   onAddOption={this.handleQuestionAddOption}
-                //   onOptionChange={this.handleOptionChange}
-                //   onOptionRemove={this.handleRemoveOption}
-                //   onSelectAnswer={this.handleSelectAnswer}
               />
             ))}
           </div>
@@ -110,7 +93,7 @@ class QuizTaker extends Component {
               }}
             >
               <button className="tool-button" onClick={this.handleSubmit}>
-                <Emoji emoji="💣" /> Submit
+                Submit
               </button>
             </div>
           </div>

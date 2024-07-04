@@ -106,9 +106,6 @@ const QuizDone = (props) => {
           >
             <Link to="/dashboard">
               <span className="back-to-home ">
-                <span role="img" aria-label="man-walking">
-                  🚶
-                </span>{" "}
                 Go to Dashboard
               </span>
             </Link>

@@ -56,7 +56,6 @@ class QuizFetcher extends Component {
             >
               <div className="profile-name">Enter Quiz Code</div>
               <div className="profile-email pb-3">
-                There is still time, run away! You don't have to do this!
               </div>
               <input
                 className="quiz-code-input"
@@ -70,7 +69,7 @@ class QuizFetcher extends Component {
               </button>
               {this.state.error && (
                 <div className="profile-email pb-3" style={{}}>
-                  No quiz found, good for you!
+                  No quiz found, please enter a valid quiz code.
                 </div>
               )}
               {!this.state.error && this.state.quiz && (
@@ -85,11 +84,6 @@ class QuizFetcher extends Component {
                         <Emoji emoji="⚔️" /> Proceed To Battle
                       </button>
                     </Link>
-                    <ToolTip
-                      emoji="🪓"
-                      title="There is no turning back!"
-                      description="No mercy will be shown unto you. You shall receive the questions!"
-                    />
                   </div>
                 </>
               )}
