@@ -142,13 +142,13 @@ class QuizBuilder extends Component {
             <div className="col-sm-8 offset-sm-2 section">
               <input
                 className="profile-name input-quiz-title"
-                placeholder="Legendary Quiz Title"
+                placeholder="Quiz Title"
                 value={this.state.title}
                 onChange={this.handleTitleChange}
               />
               <input
                 className="profile-email input-quiz-desc mt-1"
-                placeholder="Legendary Quiz Description"
+                placeholder="Click to add quiz description"
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
               />
