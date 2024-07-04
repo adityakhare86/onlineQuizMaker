@@ -87,7 +87,7 @@ const QuizInfo = (props) => {
                 fontSize: "12px",
               }}
             >
-              Code copied to your clipboard.
+              Quiz ID copied to clipboard.
             </div>
           )}
         </td>

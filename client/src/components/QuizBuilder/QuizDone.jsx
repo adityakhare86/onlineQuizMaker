@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Layout/NavBar";
 import { Link } from "react-router-dom";
 
 const QuizDone = (props) => {
+  const [copySuccess, setCopySuccess] = useState("");
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(props.location.state.quiz_id).then(() => {
+      setCopySuccess("Quiz ID copied to clipboard!");
+      setTimeout(() => setCopySuccess(""), 2000); // Hide the message after 1 second
+    });
+  };
+
   return (
     <React.Fragment>
       <NavBar
@@ -22,15 +31,7 @@ const QuizDone = (props) => {
               textAlign: "center",
             }}
           >
-            Your Quiz is Created,{" "}
-            <span
-              style={{
-                color: "var(--quizcraft-dark-purple)",
-              }}
-            >
-              Quizzer
-            </span>
-            !
+            Your quiz has been created.
           </div>
         </div>
         <div className="row">
@@ -64,12 +65,38 @@ const QuizDone = (props) => {
                 margin: "auto",
                 width: "fit-content",
                 backgroundColor: "var(--quizcraft-light)",
+                display: "inline-block",
+                cursor: "pointer",
               }}
+              onClick={copyToClipboard}
             >
-              {props.location.state.quiz_id}
+              {props.location.state.quiz_id}{" "}
+              <span role="img" aria-label="magnet">
+                🧲
+              </span>
             </div>
           </div>
         </div>
+        {copySuccess && (
+          <div className="row mt-2">
+            <div
+              className="col-sm-12"
+              style={{
+                fontFamily: `'Roboto', sans-serif`,
+                fontSize: "14px",
+                color: "black",
+                backgroundColor: "white",
+                textAlign: "center",
+                padding: "0.5em",
+                borderRadius: "8px",
+                maxWidth: "300px",
+                margin: "0 auto",
+              }}
+            >
+              {copySuccess}
+            </div>
+          </div>
+        )}
         <div className="row">
           <div
             className="col-sm-12 mt-5"
