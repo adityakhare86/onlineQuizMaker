@@ -25,7 +25,8 @@ const RegistrationDone = (props) => {
             Congratulations! You are now a {" "}
             <span
               style={{
-                color: "var(--quizcraft-dark-purple)",
+                color: "var(--quizcraft-darker-purple)",
+                fontWeight: "800"
               }}
             >
               QuizCrafter
