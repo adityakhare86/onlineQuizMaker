@@ -17,6 +17,8 @@
   --quizcraft-bg-dark: black;
   --quizcraft-orange: #f7941e;
   --quizcraft-light-blue: #24bed0;
+  --quizcraft-light-green: rgb(56, 212, 56);
+  --quizcraft-light-red: rgb(218, 77, 105);
 
   --black: #000;
 }
@@ -96,6 +98,42 @@
 
 .dashboard-button-landing:hover{
   background-color: rgb(7, 208, 7);
+}
+
+.dashboard-button-login{
+  color: #000;
+  transition: all 0.5s ease;
+}
+
+.dashboard-button-login:hover{
+  background-color: rgb(7, 208, 7);
+}
+
+.dashboard-button-register{
+  width: 140px;
+  height: 36px;
+  border-radius: 8px;
+  border-style: none;
+  color: var(--quizcraft-bg-dark);
+  background-color: var(--quizcraft-light-blue);
+  margin: 1vh 0.5vw 1vh 0.5vw;
+  transition: all 0.5s ease;
+}
+
+.dashboard-button-register:hover {
+  color: var(--black);
+  background-color: var(--quizcraft-light-green); 
+}
+
+.login-button-login{
+  color: var(--black);
+  background-color: var(--quizcraft-orange);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.login-button-login:hover{
+  background-color: var(--quizcraft-light-green);
 }
 
 .jumbo {
@@ -185,12 +223,12 @@
 
 .logout-button:hover {
   color: var(--black);
-  background-color: crimson;
+  background-color: var(--quizcraft-light-red);
 }
 
 .logout-button:active {
   color: var(--quizcraft-light);
-  border: 2px solid crimson;
+  border: 2px solid var(--quizcraft-light-red);
   background-color: var(--quizcraft-bg-dark);
 }
 
@@ -404,7 +442,7 @@ button:focus {
   margin-left: 20px;
 }
 .remove-button:hover {
-  background-color: crimson;
+  background-color: var(--quizcraft-light-red);
 }
 .remove-button:active {
   background-color: darkred;

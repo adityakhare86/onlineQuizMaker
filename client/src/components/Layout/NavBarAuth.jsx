@@ -26,12 +26,12 @@ const NavBarAuth = (props) => {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link to="/login">
-            <button className="button login-button mr-2">Login</button>
+            <button className="button login-button dashboard-button-login">Login</button>
           </Link>
         </li>
         <li className="nav-item active mr-5">
           <Link to="/registration">
-            <button className="button register-button">Register</button>
+            <button className="button dashboard-button-register">Register</button>
           </Link>
         </li>
       </ul>

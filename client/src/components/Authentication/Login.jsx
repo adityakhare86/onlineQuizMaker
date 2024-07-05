@@ -119,7 +119,7 @@ class Login extends Component {
                 <div className="col-sm-2 offset-sm-4">
                   <button
                     type="submit"
-                    className="button register-button"
+                    className="button login-button-login"
                     style={{
                       width: "100%",
                       height: "42px",
