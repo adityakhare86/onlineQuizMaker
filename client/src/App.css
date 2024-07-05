@@ -55,6 +55,7 @@
   color: var(--black);
   background: none;
   border: none;
+  border-radius: 8px;
 }
 
 .login-button {
@@ -189,6 +190,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: var(--quizcraft-light);
+  margin-bottom: 2px;
 }
 
 .input-field {
@@ -610,4 +612,54 @@ table {
 .login-page-buttons-cont{
   display: flex;
   flex-direction: row;
+}
+
+.container-fluid-registration{
+  margin-top: 12vh;
+  background-color: var(--blue-grade2);
+  width: 45vw;
+  height: 60vh;
+  padding: 4vh 4vw 4vh 4vw;
+  border-radius: 8px;
+}
+
+.registration-form{
+  margin-top: 5vh;
+}
+
+.registration-form-placeholders{
+  margin-bottom: 2vh;
+}
+
+.registration-form-register-button{
+  background-color: var(--quizcraft-orange);
+  margin-top: 3vh;
+  width: 18vw;
+  height: 5vh;
+  margin-right: 1.4vw;
+  transition: all 0.5s ease;
+}
+
+.registration-form-register-button:hover{
+  background-color: var(--quizcraft-light-green);
+}
+
+.registration-form-button-cont{
+  display: flex;
+  flex-direction: row;
+}
+
+.already-registered{
+  display: flex;
+  margin-top: 3vh;
+  background-color: var(--quizcraft-light-blue);
+  height: 5vh;
+  width: 18vw;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.already-registered:hover{
+  background-color: var(--quizcraft-light-green);
 }
