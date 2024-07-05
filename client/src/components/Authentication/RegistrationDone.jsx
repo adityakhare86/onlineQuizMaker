@@ -42,7 +42,7 @@ const RegistrationDone = (props) => {
             }}
           >
             <Link to="/login">
-              <span className="back-to-home ">
+              <span className="back-to-home go-to-login-reg-done">
                 Go to Login
               </span>
             </Link>

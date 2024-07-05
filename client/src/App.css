@@ -177,7 +177,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: var(--black);
-  text-decoration-line: underline;
 }
 
 .auth-title {
@@ -662,4 +661,9 @@ table {
 
 .already-registered:hover{
   background-color: var(--quizcraft-light-green);
+}
+
+.go-to-login-reg-done{
+  background-color: var(--quizcraft-light-blue);
+  height: 14vh;
 }
