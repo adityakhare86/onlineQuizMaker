@@ -127,6 +127,9 @@
 
 .login-button-login{
   color: var(--black);
+  margin-top: 4vh;
+  margin-right: 4vh;
+  width: 17vw;
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
   transition: all 0.5s ease;
@@ -193,7 +196,6 @@
   font-size: 18px;
   font-weight: bold;
   color: var(--quizcraft-bg-dark);
-  /* background-color: var(--quizcraft-light-purple); */
   border: none;
 }
 
@@ -234,8 +236,9 @@
 
 .new-user-register-here{
   background-color: var(--quizcraft-light-blue);
-  width: 100%;
+  width: 17vw;
   height: 4.6vh;
+  margin-top: 4vh;
   border-radius: 8px;
   font-family: "Lexend Deca", sans-serif;
   font-size: medium;
@@ -581,4 +584,30 @@ table {
 
 .dashboard-quizzer-tools{
   width: 30vw;
+}
+
+.login-container-fluid{
+  margin-top: 12vh;
+  background-color: var(--blue-grade2);
+  width: 45vw;
+  height: 50vh;
+  padding: 4vh 4vw 4vh 4vw;
+  border-radius: 8px;
+}
+
+.login-text-login{
+  margin-bottom: 5vh;
+}
+
+.login-form-container{
+  width: 35vw;
+}
+
+.login-input-fields{
+  margin-bottom: 2vh;
+}
+
+.login-page-buttons-cont{
+  display: flex;
+  flex-direction: row;
 }

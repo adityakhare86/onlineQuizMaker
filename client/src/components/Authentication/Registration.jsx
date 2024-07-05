@@ -40,13 +40,9 @@ class Registration extends Component {
   };
 
   render() {
-    // console.log("register", sessionStorage.getItem("isLoggedIn"));
     if (this.props.checkLogin()) {
       return <Redirect to={{ pathname: "/dashboard" }} />;
     }
-    // if (sessionStorage.getItem("isLoggedIn") === "true") {
-    //   return <Redirect to={{ pathname: "/dashboard" }} />;
-    // }
     return (
       <React.Fragment>
         <NavBar
