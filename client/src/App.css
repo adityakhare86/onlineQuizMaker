@@ -91,6 +91,11 @@
 
 .dashboard-button-landing{
   color: #000;
+  transition: all 0.5s ease;
+}
+
+.dashboard-button-landing:hover{
+  background-color: rgb(7, 208, 7);
 }
 
 .jumbo {
@@ -175,10 +180,11 @@
   color: var(--quizcraft-bg-dark);
   background-color: var(--quizcraft-light-blue);
   margin: 1vh 0.5vw 1vh 0.5vw;
+  transition: all 0.5s ease;
 }
 
 .logout-button:hover {
-  color: var(--quizcraft-light);
+  color: var(--black);
   background-color: crimson;
 }
 
