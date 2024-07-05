@@ -5,8 +5,16 @@
   --quizcraft-dark-purple: #8e8cfc;
   --quizcraft-deep-purple: #6464fc;
   --quizcraft-darker-purple: #3a3ac7;
-  --quizcraft-bg-dark: #fff;
-  --quizcraft-light: black;
+
+  --blue-grade1: #CFF3F4;
+  --blue-grade2: #A2E5EB;
+  --blue-grade3: #75D7E2;
+  --blue-grade4: #1EA8B9;
+  --blue-grade5: #188496;
+  --blue-grade6: #126173;
+  
+  --quizcraft-bg-light: #fff;
+  --quizcraft-bg-dark: black;
   --quizcraft-orange: #f7941e;
   --quizcraft-light-blue: #24bed0;
 }
@@ -34,7 +42,7 @@
 }
 
 .bg {
-  background-color: #fff;
+  background-color: var(--blue-grade1);
 }
 
 .button {
@@ -50,11 +58,11 @@
   height: 36px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizcraft-bg-dark);
+  background-color: var(--quizcraft-orange);
 }
 .login-button:hover {
   color: var(--quizcraft-bg-dark);
-  background-color: var(--quizcraft-light);
+  background-color: var(--quizcraft-orange);
 }
 .login-button:active {
   color: var(--quizcraft-light);
@@ -67,7 +75,7 @@
   height: 36px;
   border-radius: 8px;
   border-style: none;
-  background-color: var(--quizcraft-deep-purple);
+  background-color: var(--quizcraft-light-blue);
 }
 
 .register-button:hover {
@@ -88,7 +96,7 @@
 
 .jumbo-subtitle {
   text-align: center;
-  color: var(--quizcraft-light-purple);
+  color: #000;
   font-size: larger;
 }
 
