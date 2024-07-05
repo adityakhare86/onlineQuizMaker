@@ -61,6 +61,7 @@
   border-radius: 8px;
   border-style: none;
   background-color: var(--quizcraft-orange);
+  margin: 1vh 0.5vw 1vh 0.5vw;
 }
 .login-button:hover {
   color: var(--quizcraft-bg-dark);
@@ -86,6 +87,10 @@
 .register-button:active {
   border: 2px solid var(--quizcraft-deep-purple);
   background-color: var(--quizcraft-bg-dark);
+}
+
+.dashboard-button-landing{
+  color: #000;
 }
 
 .jumbo {
@@ -168,7 +173,8 @@
   border-radius: 8px;
   border-style: none;
   color: var(--quizcraft-bg-dark);
-  background-color: var(--quizcraft-light);
+  background-color: var(--quizcraft-light-blue);
+  margin: 1vh 0.5vw 1vh 0.5vw;
 }
 
 .logout-button:hover {
