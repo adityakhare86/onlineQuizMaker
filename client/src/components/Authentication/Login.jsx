@@ -61,7 +61,7 @@ class Login extends Component {
           onLogout={this.props.onLogout}
         />
         <div className="container-fluid">
-          <div className="row">
+          {/* <div className="row">
             <div className="col-sm-8 offset-sm-4 mt-5">
               <Link to="/">
                 <span className="back-to-home">
@@ -69,7 +69,7 @@ class Login extends Component {
                 </span>
               </Link>
             </div>
-          </div>
+          </div> */}
           <div className="row">
             <div className="col-sm-8 offset-sm-4">
               <div className="auth-title mt-1">Login</div>
@@ -130,7 +130,7 @@ class Login extends Component {
                 </div>
                 <div className="col-sm-2">
                   <Link to="/registration">
-                    <div className="back-to-home mt-2">
+                    <div className="button new-user-register-here">
                       New user? Register here
                     </div>
                   </Link>

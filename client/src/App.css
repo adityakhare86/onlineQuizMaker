@@ -52,7 +52,7 @@
 .button {
   font-family: "Lexend Deca", sans-serif;
   font-size: medium;
-  color: var(--quizcraft-light);
+  color: var(--black);
   background: none;
   border: none;
 }
@@ -172,7 +172,7 @@
 .back-to-home {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  color: var(--quizcraft-light-purple);
+  color: var(--black);
   text-decoration-line: underline;
 }
 
@@ -230,6 +230,23 @@
   color: var(--quizcraft-light);
   border: 2px solid var(--quizcraft-light-red);
   background-color: var(--quizcraft-bg-dark);
+}
+
+.new-user-register-here{
+  background-color: var(--quizcraft-light-blue);
+  width: 100%;
+  height: 4.6vh;
+  border-radius: 8px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: medium;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.new-user-register-here:hover{
+  text-decoration:none;
+  background-color: var(--quizcraft-light-green);
 }
 
 .section {
