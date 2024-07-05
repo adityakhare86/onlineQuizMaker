@@ -13,7 +13,7 @@ const Tools = (props) => {
           <div className="tooltip-wrapper">
             <Link to="/quiz-builder">
               <button className="tool-button">
-                <Emoji emoji="💀" /> Build Quiz
+                <Emoji emoji="💀" /> Create Quiz
               </button>
             </Link>
             <ToolTip

@@ -9,7 +9,7 @@ const Logo = () => {
         style={{
           fontFamily: `'Lexend Deca', sans-serif`,
           fontSize: "24px",
-          color: "var(--quizcraft-light)",
+          color: "var(--black)",
           display: "inline-block",
           verticalAlign: "middle",
           paddingLeft: "8px",

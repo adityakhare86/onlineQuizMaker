@@ -186,7 +186,7 @@
   background-color: var(--quizcraft-light);
   border-radius: 4px;
   padding: 26px;
-  box-shadow: 6px 6px var(--blue-grade6);
+  box-shadow: 6px 6px var(--blue-grade5);
 }
 
 .profile-name {
@@ -221,7 +221,7 @@
   color: var(--black);
   border-radius: 4px;
   border-style: none;
-  background-color: var(--quizcraft-light-blue);
+  background-color: var(--quizcraft-orange);
   width: max-content;
   height: max-content;
   margin-top: 10px;
