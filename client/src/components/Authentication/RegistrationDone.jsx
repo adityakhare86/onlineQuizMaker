@@ -42,8 +42,10 @@ const RegistrationDone = (props) => {
             }}
           >
             <Link to="/login">
-              <span className="back-to-home go-to-login-reg-done">
-                Go to Login
+              <span className="back-to-home">
+                <button className="go-to-login-reg-done button">
+                  Go to Login
+                </button>
               </span>
             </Link>
           </div>
