@@ -151,13 +151,11 @@ class QuizBuilder extends Component {
           checkLogin={this.props.checkLogin}
           onLogout={this.props.onLogout}
         />
-        <div className="container-fluid">
-          <div className="row mt-5">
-            <div className="col-sm-8 offset-sm-2 section">
+        <div className="container-fluid quiz-creator-container">
               <input
                 className="profile-name"
                 id="input-quiz-title"
-                placeholder="Quiz Title"
+                placeholder="Click to add quiz title"
                 value={this.state.title}
                 onChange={this.handleTitleChange}
               />
@@ -167,9 +165,6 @@ class QuizBuilder extends Component {
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
               />
-            </div>
-          </div>
-          <div className="row mt-5">
             {this.state.questions.map((question) => (
               <Question
                 key={question.id}
@@ -182,28 +177,20 @@ class QuizBuilder extends Component {
                 onSelectAnswer={this.handleSelectAnswer}
               />
             ))}
-          </div>
 
           {/* add quiz button  */}
-          <div className="row mt-4 mb-4">
-            <div
-              className="col-sm-12"
-              style={{
-                textAlign: "center",
-              }}
-            >
-              <button className="tool-button" id="add-question-button"
-              onClick={this.handleAddQuestion}>
-                <Emoji emoji="➕" /> Add Question
-              </button>
-              <button className="tool-button" id="reset-quiz-button"
-              onClick={this.handleResetAll}>
-                <Emoji emoji="❌" /> Reset Quiz
-              </button>
-              <button className="tool-button" onClick={this.handleSubmitQuiz}>
-                <Emoji emoji="✔️" /> Submit Quiz
-              </button>
-            </div>
+          <div class="quiz-creator-button-container">
+            <button className="tool-button" id="add-question-button"
+            onClick={this.handleAddQuestion}>
+              <Emoji emoji="➕" /> Add Question
+            </button>
+            <button className="tool-button" id="reset-quiz-button"
+            onClick={this.handleResetAll}>
+              <Emoji emoji="❌" /> Reset Quiz
+            </button>
+            <button className="tool-button" onClick={this.handleSubmitQuiz}>
+              <Emoji emoji="✔️" /> Submit Quiz
+            </button>
           </div>
           {this.state.errorMessage && (
             <div className="row mt-4">

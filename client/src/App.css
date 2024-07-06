@@ -368,16 +368,17 @@
 }
 
 #input-quiz-title:hover {
-  border-bottom: 2px solid var(--blue-grade4);
+  border-bottom: 2px solid var(--blue-grade2);
 }
 
 #input-quiz-title:active,
 #input-quiz-title:focus {
-  border-bottom: 2px solid var(--blue-grade4);
+  border-bottom: 2px solid var(--blue-grade3);
 }
 
 #input-quiz-title::placeholder{
   font-weight: 600;
+  color: black;
 }
 
 .input-quiz-desc {
@@ -391,12 +392,12 @@
 }
 
 .input-quiz-desc:hover {
-  border-bottom: 2px solid var(--quizcraft-bg-dark);
+  border-bottom: 2px solid var(--blue-grade2);
 }
 
 .input-quiz-desc:active,
 .input-quiz-desc:focus {
-  border-bottom: 2px solid var(--quizcraft-deep-purple);
+  border-bottom: 2px solid var(--blue-grade3);
 }
 
 input:focus,
@@ -471,11 +472,11 @@ button:focus {
 .remove-button {
   width: max-content;
   height: max-content;
-  background-color: var(--quizcraft-deep-purple);
+  background-color: var(--quizcraft-light-blue);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
-  color: var(--quizcraft-light);
+  color: var(--black);
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
@@ -490,7 +491,7 @@ button:focus {
 .add-button {
   width: max-content;
   height: max-content;
-  background-color: var(--quizcraft-deep-purple);
+  background-color: var(--quizcraft-orange);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -501,10 +502,7 @@ button:focus {
 }
 
 .add-button:hover {
-  background-color: var(--quizcraft-darker-purple);
-}
-.add-button:active {
-  background-color: var(--quizcraft-bg-dark);
+  background-color: var(--quizcraft-light-green);
 }
 
 .remove-option-button {
@@ -701,4 +699,28 @@ table {
 
 #reset-quiz-button:hover{
   background-color: var(--quizcraft-light-red);
+}
+
+.input-question-title::placeholder{
+  color: black;
+}
+
+#quiz-title-section{
+  border: 20px black;
+}
+
+.quiz-creator-container{
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue-grade2);
+  border-radius: 8px;
+  margin-top: 4vh;
+  max-height: max-content;
+  min-height: max-content;
+}
+
+.quiz-creator-button-container{
+  display: flex;
+  flex-direction: row;
 }
