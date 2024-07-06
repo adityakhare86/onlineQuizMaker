@@ -716,6 +716,7 @@ table {
   background-color: var(--blue-grade2);
   border-radius: 8px;
   margin-top: 4vh;
+  padding: 4vh 2vw;
   max-height: max-content;
   min-height: max-content;
 }
@@ -723,4 +724,7 @@ table {
 .quiz-creator-button-container{
   display: flex;
   flex-direction: row;
+  padding-left: 10vw;
+  column-gap: 4vw;
+  margin-top: 1vh;
 }

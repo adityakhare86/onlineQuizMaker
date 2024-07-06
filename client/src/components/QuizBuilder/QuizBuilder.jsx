@@ -186,7 +186,7 @@ class QuizBuilder extends Component {
             </button>
             <button className="tool-button" id="reset-quiz-button"
             onClick={this.handleResetAll}>
-              <Emoji emoji="❌" /> Reset Quiz
+              <Emoji emoji="🚫" /> Reset Quiz
             </button>
             <button className="tool-button" onClick={this.handleSubmitQuiz}>
               <Emoji emoji="✔️" /> Submit Quiz
