@@ -25,7 +25,7 @@ const Tools = (props) => {
         <div className="card">
           <div className="tooltip-wrapper">
             <Link to="/quiz-fetcher">
-              <button className="tool-button">
+              <button className="tool-button" id="attend-quiz-button">
                 <Emoji emoji="⚔️" /> Attend Quiz
               </button>
             </Link>

@@ -3,7 +3,10 @@ import Emoji from "../Layout/Emoji";
 
 const ToolTip = (props) => {
   return (
-    <div className="tool-tip">
+    <div className="tool-tip"
+      style={{
+        backgroundColor: "var(--blue-grade1)"
+      }}>
       <p
         style={{
           fontFamily: `"Roboto", sans-serif`,

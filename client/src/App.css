@@ -173,6 +173,10 @@
   color: var(--quizcraft-bg-dark);
 }
 
+#attend-quiz-button{
+  background-color: var(--quizcraft-light-blue);
+}
+
 .back-to-home {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -267,6 +271,11 @@
   font-weight: bold;
 }
 
+.profile-name::placeholder{
+  color: cadetblue;
+  border: 1px black;
+}
+
 .profile-email {
   color: lightslategray;
   font-family: "Roboto", sans-serif;
@@ -303,9 +312,9 @@
 
 .tool-button:hover {
   background-color: rgb(1, 186, 1);
-  -webkit-transition: background-color 500ms ease-out;
-  -ms-transition: background-color 500ms ease-out;
-  transition: background-color 500ms ease-out;
+  -webkit-transition: background-color 500ms ease;
+  -ms-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
 }
 
 .tool-button:active {
@@ -350,26 +359,35 @@
   transition: opacity 600ms ease-out;
 }
 
-.input-quiz-title {
+#input-quiz-title {
   background: none;
   border: none;
   width: 90%;
   margin-right: 10px;
+  font-size: 34px;
 }
 
-.input-quiz-title:hover {
-  border-bottom: 2px solid var(--quizcraft-bg-dark);
+#input-quiz-title:hover {
+  border-bottom: 2px solid var(--blue-grade4);
 }
 
-.input-quiz-title:active,
-.input-quiz-title:focus {
-  border-bottom: 2px solid var(--quizcraft-deep-purple);
+#input-quiz-title:active,
+#input-quiz-title:focus {
+  border-bottom: 2px solid var(--blue-grade4);
+}
+
+#input-quiz-title::placeholder{
+  font-weight: 600;
 }
 
 .input-quiz-desc {
   background: none;
   border: none;
   width: 70%;
+}
+
+.input-quiz-desc::placeholder{
+  color: cadetblue;
 }
 
 .input-quiz-desc:hover {
@@ -667,4 +685,20 @@ table {
   background-color: var(--quizcraft-light-blue);
   height: 4vh;
   width: 6vw;
+}
+
+#add-question-button{
+  background-color: var(--quizcraft-light-blue);
+}
+
+#add-question-button:hover{
+  background-color: var(--quizcraft-light-green);
+}
+
+#reset-quiz-button{
+  background-color: var(--quizcraft-light-blue);
+}
+
+#reset-quiz-button:hover{
+  background-color: var(--quizcraft-light-red);
 }

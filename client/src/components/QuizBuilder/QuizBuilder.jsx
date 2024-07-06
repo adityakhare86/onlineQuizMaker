@@ -155,7 +155,8 @@ class QuizBuilder extends Component {
           <div className="row mt-5">
             <div className="col-sm-8 offset-sm-2 section">
               <input
-                className="profile-name input-quiz-title"
+                className="profile-name"
+                id="input-quiz-title"
                 placeholder="Quiz Title"
                 value={this.state.title}
                 onChange={this.handleTitleChange}
@@ -191,14 +192,16 @@ class QuizBuilder extends Component {
                 textAlign: "center",
               }}
             >
-              <button className="tool-button" onClick={this.handleAddQuestion}>
-                <Emoji emoji="💣" /> Add Question
+              <button className="tool-button" id="add-question-button"
+              onClick={this.handleAddQuestion}>
+                <Emoji emoji="➕" /> Add Question
               </button>
-              <button className="tool-button" onClick={this.handleResetAll}>
-                <Emoji emoji="✂️" /> Reset Quiz
+              <button className="tool-button" id="reset-quiz-button"
+              onClick={this.handleResetAll}>
+                <Emoji emoji="❌" /> Reset Quiz
               </button>
               <button className="tool-button" onClick={this.handleSubmitQuiz}>
-                <Emoji emoji="🔨" /> Submit Quiz
+                <Emoji emoji="✔️" /> Submit Quiz
               </button>
             </div>
           </div>
