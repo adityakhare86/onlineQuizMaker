@@ -385,6 +385,7 @@
   background: none;
   border: none;
   width: 70%;
+  margin-bottom: 5vh;
 }
 
 .input-quiz-desc::placeholder{
@@ -470,9 +471,10 @@ button:focus {
 }
 
 .remove-button {
-  width: max-content;
+  width: 7vw;
+  /* min-width: max-content; */
   height: max-content;
-  background-color: var(--quizcraft-light-blue);
+  background-color: var(--quizcraft-light-red);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -480,18 +482,19 @@ button:focus {
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
+  transition: all 0.3s ease;
 }
 .remove-button:hover {
-  background-color: var(--quizcraft-light-red);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .remove-button:active {
   background-color: darkred;
 }
 
 .add-button {
-  width: max-content;
+  width: 7vw;
   height: max-content;
-  background-color: var(--quizcraft-orange);
+  background-color: var(--quizcraft-light-green);
   border: none;
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -499,10 +502,12 @@ button:focus {
   border-radius: 6px;
   margin-top: 10px;
   margin-left: 20px;
+  transition: all 0.3s ease;
 }
 
 .add-button:hover {
-  background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+
 }
 
 .remove-option-button {
@@ -727,4 +732,25 @@ table {
   padding-left: 10vw;
   column-gap: 4vw;
   margin-top: 1vh;
+}
+
+.question-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.question-changes-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.select-answer-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.question-and-select-answer-container{
+  width: 54vw;
+  display: flex;
+  flex-direction: column;
 }

@@ -21,9 +21,8 @@ const Question = (props) => {
 
   const { question } = props;
   return (
-    <div className="col-sm-8 offset-sm-2 section mt-4">
-      <div className="row">
-        <div className="col-sm-10">
+      <div className="question-container">
+        <div className="question-and-select-answer-container">
           <input
             type="text"
             className="profile-name input-question-title"
@@ -31,44 +30,40 @@ const Question = (props) => {
             value={question.title}
             onChange={handleTitleChange}
           />
-          <div className="row pt-3">
-            {question.options.map((option) => (
-              <Option
-                key={option.id}
-                id={option.id}
-                value={option.value}
-                onChange={handleOptionChange}
-                onDelete={handleOptionRemove}
-              />
-            ))}
-          </div>
-          <div className="row pt-3">
-            <div className="col-sm-12">
-              <label className="option-label">[Answer]</label>
-              <select
-                defaultValue=""
-                className="option-dropdown"
-                style={{
-                  width: "max-content",
-                  marginTop: ".2em",
-                  marginLeft: ".5em",
-                  color: "var(--quizcraft-bg-dark)",
-                }}
-                onChange={handleSelectAnswer}
+          {question.options.map((option) => (
+            <Option
+              key={option.id}
+              id={option.id}
+              value={option.value}
+              onChange={handleOptionChange}
+              onDelete={handleOptionRemove}
+            />
+          ))}
+          <div className="select-answer-container">
+            <label className="option-label">[Answer]</label>
+            <select
+              defaultValue=""
+              className="option-dropdown"
+              style={{
+                width: "max-content",
+                marginTop: ".2em",
+                marginLeft: ".5em",
+                color: "var(--quizcraft-bg-dark)",
+              }}
+              onChange={handleSelectAnswer}
               >
-                <option value="" disabled hidden>
-                  Select Answer
+              <option value="" disabled hidden>
+                Select Answer
+              </option>
+              {question.options.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.id + 1 + ": " + option.value}
                 </option>
-                {question.options.map((option) => (
-                  <option key={option.id} value={option.id}>
-                    {option.id + 1 + ": " + option.value}
-                  </option>
-                ))}
-              </select>
-            </div>
+              ))}
+            </select>
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="question-changes-container">
           <button
             className="remove-button"
             onClick={() => props.onRemove(question.id)}
@@ -79,11 +74,10 @@ const Question = (props) => {
             className="add-button"
             onClick={() => props.onAddOption(question.id)}
           >
-            <Emoji emoji="✍️" /> Add Option
+            <Emoji emoji="✔️" /> Add Option
           </button>
         </div>
       </div>
-    </div>
   );
 };
 
