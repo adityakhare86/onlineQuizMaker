@@ -54,13 +54,14 @@ class QuizFetcher extends Component {
                 textAlign: "center",
               }}
             >
-              <div className="profile-name">Enter Quiz Code</div>
+              <div className="profile-name" id="enter-quiz-code">Search for a Quiz</div>
               <div className="profile-email pb-3">
               </div>
               <input
                 className="quiz-code-input"
                 type="text"
                 spellCheck="false"
+                placeholder="Enter quiz code"
                 value={this.state.quizCode}
                 onChange={this.handleQuizCodeInput}
               />
@@ -68,7 +69,7 @@ class QuizFetcher extends Component {
                 <Emoji emoji="🔎" /> Find Quiz
               </button>
               {this.state.error && (
-                <div className="profile-email pb-3" style={{}}>
+                <div id="no-quiz-found">
                   No quiz found, please enter a valid quiz code.
                 </div>
               )}
