@@ -20,6 +20,7 @@
   --quizcraft-light-green: rgb(56, 212, 56);
   --quizcraft-light-red: rgb(218, 77, 105);
 
+  --placeholder: rgb(91, 116, 117);
   --black: #000;
 }
 
@@ -206,7 +207,7 @@
 
 .input-field::placeholder {
   font-weight: normal;
-  color: cadetblue;
+  color: var(--placeholder);
 }
 
 .submit-button {
@@ -272,7 +273,7 @@
 }
 
 .profile-name::placeholder{
-  color: cadetblue;
+  color: var(--placeholder);
   border: 1px black;
 }
 
@@ -378,7 +379,7 @@
 
 #input-quiz-title::placeholder{
   font-weight: 600;
-  color: black;
+  color: var(--placeholder);
 }
 
 .input-quiz-desc {
@@ -389,7 +390,7 @@
 }
 
 .input-quiz-desc::placeholder{
-  color: cadetblue;
+  color: var(--placeholder);
 }
 
 .input-quiz-desc:hover {
@@ -707,7 +708,7 @@ table {
 }
 
 .input-question-title::placeholder{
-  color: black;
+  color: var(--placeholder);
 }
 
 #quiz-title-section{
