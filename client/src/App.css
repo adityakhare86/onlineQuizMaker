@@ -57,6 +57,11 @@
   background: none;
   border: none;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .login-button {
@@ -66,10 +71,12 @@
   border-style: none;
   background-color: var(--quizcraft-orange);
   margin: 1vh 0.5vw 1vh 0.5vw;
+  transition: all 0.3s ease;
 }
 .login-button:hover {
   color: var(--quizcraft-bg-dark);
   background-color: var(--quizcraft-orange);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .login-button:active {
   color: var(--quizcraft-light);
@@ -83,10 +90,13 @@
   border-radius: 8px;
   border-style: none;
   background-color: var(--quizcraft-light-blue);
+  transition: all 0.3s ease;
+
 }
 
 .register-button:hover {
   background-color: var(--quizcraft-dark-purple);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .register-button:active {
   border: 2px solid var(--quizcraft-deep-purple);
@@ -95,20 +105,22 @@
 
 .dashboard-button-landing{
   color: #000;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .dashboard-button-landing:hover{
   background-color: rgb(7, 208, 7);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .dashboard-button-login{
   color: #000;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .dashboard-button-login:hover{
   background-color: rgb(7, 208, 7);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .dashboard-button-register{
@@ -119,12 +131,13 @@
   color: var(--quizcraft-bg-dark);
   background-color: var(--quizcraft-light-blue);
   margin: 1vh 0.5vw 1vh 0.5vw;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .dashboard-button-register:hover {
   color: var(--black);
   background-color: var(--quizcraft-light-green); 
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .login-button-login{
@@ -134,11 +147,12 @@
   width: 17vw;
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .login-button-login:hover{
   background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .jumbo {
@@ -153,25 +167,6 @@
   text-align: center;
   color: #000;
   font-size: larger;
-}
-
-.demo-button {
-  width: 200px;
-  height: 48px;
-  border-radius: 8px;
-  border-style: none;
-  background-color: var(--quizcraft-deep-purple);
-}
-
-.demo-button:hover {
-  border: 2px solid var(--quizcraft-deep-purple);
-  background: none;
-}
-
-.demo-button:active {
-  border: 2px solid var(--quizcraft-deep-purple);
-  background-color: var(--quizcraft-light);
-  color: var(--quizcraft-bg-dark);
 }
 
 #attend-quiz-button{
@@ -226,12 +221,13 @@
   color: var(--quizcraft-bg-dark);
   background-color: var(--quizcraft-light-blue);
   margin: 1vh 0.5vw 1vh 0.5vw;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .logout-button:hover {
   color: var(--black);
   background-color: var(--quizcraft-light-red);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .logout-button:active {
@@ -251,11 +247,14 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  transition: all 0.3s ease;
+
 }
 
 .new-user-register-here:hover{
   text-decoration:none;
   background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .section {
@@ -309,10 +308,12 @@
   margin-bottom: 10px;
   margin-left: 6px;
   padding: 16px 24px 16px 24px;
+  transition: all 0.3s ease;
 }
 
 .tool-button:hover {
   background-color: rgb(1, 186, 1);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   -webkit-transition: background-color 500ms ease;
   -ms-transition: background-color 500ms ease;
   transition: background-color 500ms ease;
@@ -517,10 +518,12 @@ button:focus {
   background: none;
   border: none;
   margin-top: 0.8em;
+  transition: all 0.3s ease;
 }
 
 .remove-option-button:hover {
   transform: scale(1.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .remove-option-button:active {
   transform: scale(1);
@@ -663,6 +666,7 @@ table {
 
 .registration-form-register-button:hover{
   background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .registration-form-button-cont{
@@ -693,18 +697,24 @@ table {
 
 #add-question-button{
   background-color: var(--quizcraft-light-blue);
+  transition: all 0.3s ease;
+
 }
 
 #add-question-button:hover{
   background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 #reset-quiz-button{
   background-color: var(--quizcraft-light-blue);
+  transition: all 0.3s ease;
+
 }
 
 #reset-quiz-button:hover{
   background-color: var(--quizcraft-light-red);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .input-question-title::placeholder{
