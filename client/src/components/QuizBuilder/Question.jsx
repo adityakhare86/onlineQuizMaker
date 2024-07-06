@@ -44,12 +44,6 @@ const Question = (props) => {
             <select
               defaultValue=""
               className="option-dropdown"
-              style={{
-                width: "max-content",
-                marginTop: ".2em",
-                marginLeft: ".5em",
-                color: "var(--quizcraft-bg-dark)",
-              }}
               onChange={handleSelectAnswer}
               >
               <option value="" disabled hidden>

@@ -765,3 +765,12 @@ table {
   display: flex;
   flex-direction: column;
 }
+
+.option-dropdown{
+  width: max-content;
+  color: black;
+}
+
+.option-dropdown::placeholder{
+  color: var(--placeholder);
+}
