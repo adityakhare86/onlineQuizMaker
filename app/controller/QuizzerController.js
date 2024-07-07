@@ -4,27 +4,31 @@ const Quizzer = require("../model/Quizzer");
 
 const QuizzerController = {
   createQuizzer: async (req, res, next) => {
-    // console.log("From Quizzer", req.body);
     const { _id, name, email } = req.body;
+
     const quizzerSchema = Joi.object({
-      id: Joi.string().required(),
+      _id: Joi.string().required(),
       name: Joi.string().required(),
       email: Joi.string().email().required(),
     });
 
-    try {
-      // create Quizzer
-      const quizzer = new Quizzer({
-        _id: _id,
-        name: name,
-        email: email,
-      });
-      const savedQuizzer = await quizzer.save();
-      console.log("Quizzer created !!!!!!!");
-      return res.status(200).send(savedQuizzer);
-    } catch (err) {
-      console.log("Error", err);
-      return res.status(400).send("Does not exist.");
+    const { error } = quizzerSchema.validate({ _id, name, email });
+    if (error) {
+      console.log("Validation error", error);
+    }
+    else{
+      try {
+        const quizzer = new Quizzer({
+          _id: _id,
+          name: name,
+          email: email,
+        });
+        const savedQuizzer = await quizzer.save();
+        return res.status(200).send(savedQuizzer);
+      } catch (err) {
+        console.log("Error", err);
+        return res.status(400).send("Does not exist.");
+      }
     }
   },
 

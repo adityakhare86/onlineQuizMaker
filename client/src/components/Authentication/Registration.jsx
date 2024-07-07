@@ -106,7 +106,7 @@ class Registration extends Component {
                 </Link>
               </div>
               {this.state.error && (
-                <AuthError text="Looks like you made a mistake. The email is probably taken." />
+                <AuthError text="Looks like you made a mistake. The email is either invalid or taken." />
               )}
             </div>
           </form>

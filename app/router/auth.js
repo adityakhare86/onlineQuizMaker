@@ -14,10 +14,15 @@ router.post("/login", async (req, res, next) => {
 
 // register new user
 router.post("/registration", async (req, res, next) => {
-  const user = await AuthController.registerUser(req, res, next);
-  if (user) {
-    req.body = user;
-    await QuizzerController.createQuizzer(req, res, next);
+  try {
+    const user = await AuthController.registerUser(req, res, next);
+    if (user) {
+      req.body = user;
+      await QuizzerController.createQuizzer(req, res, next);
+    }
+  } catch (err) {
+    console.error(err);
+    return res.status(400).send("Registration failed.");
   }
 });
 

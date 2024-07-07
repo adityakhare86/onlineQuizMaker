@@ -35,15 +35,19 @@ const AuthController = {
         email: email,
         password: hashedPass,
       });
+
+      // save user
       const savedUser = await user.save();
       const { _id } = savedUser;
+
       // send a successful response
-      return { _id, name, email }; // return user details instead of modifying req.body
+      return res.status(201).send({ _id, name, email });
     } catch (err) {
       console.error(err);
-      return res.status(400).send("Invalid data given.");
+      return res.status(500).send("Internal Server Error");
     }
   },
+
   loginUser: async (req, res, next) => {
     const loginSchema = Joi.object({
       email: Joi.string().email().required(),
@@ -70,7 +74,7 @@ const AuthController = {
       return res.header("auth-token", token).status(200).send({ _id, name, email });
     } catch (err) {
       console.error(err);
-      return res.status(400).send("Invalid data given.");
+      return res.status(500).send("Internal Server Error");
     }
   },
 
