@@ -874,3 +874,7 @@ table {
   background-color: var(--blue-grade6);
   border-radius: 90px;
 }
+
+#give-quiz-option{
+  color: var(--black);
+}

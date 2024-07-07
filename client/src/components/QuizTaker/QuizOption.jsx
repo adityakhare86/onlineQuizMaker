@@ -7,7 +7,7 @@ const QuizOption = (props) => {
         <div className="col-sm-12">
           <div className="row option-section">
             <div className="card">
-              <label className="option-label">{props.id + 1}</label>
+              <label className="option-label" id="give-quiz-option">{props.id + 1}</label>
             </div>
             <div className="card">
               <input
