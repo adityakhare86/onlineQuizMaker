@@ -834,13 +834,21 @@ table {
 
 #take-quiz-title{
   font-size: 38px;
+  margin-left: 5vw;
+  margin-top: 5vh;
 }
 
 #take-quiz-description{
   font-size: 18px;
+  margin-left: 5vw;
 }
 
 #quiz-question-option{
   text-decoration: none;
   border: none;
+}
+
+.quiz-question-container{
+  margin-left: 5vw;
+  margin-bottom: 1.5vh;
 }

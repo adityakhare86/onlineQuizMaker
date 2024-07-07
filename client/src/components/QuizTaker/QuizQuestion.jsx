@@ -8,15 +8,11 @@ const QuizQuestion = (props) => {
 
   const { question } = props;
   return (
-        <div className="col-sm-10">
+        <div className="col-sm-10 quiz-question-container">
           <div className="profile-name">{question.title}</div>
-          <div className="row pt-3">
             {question.options.map((option) => (
               <QuizOption key={option.id} id={option.id} value={option.value} />
             ))}
-          </div>
-          <div className="row pt-3">
-            <div className="col-sm-12">
               <label className="option-label">[Answer]</label>
               <select
                 defaultValue=""
@@ -38,8 +34,6 @@ const QuizQuestion = (props) => {
                   </option>
                 ))}
               </select>
-            </div>
-          </div>
         </div>
   );
 };

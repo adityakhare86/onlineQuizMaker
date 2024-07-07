@@ -68,12 +68,8 @@ class QuizTaker extends Component {
           onLogout={this.props.onLogout}
         />
         <div className="container-fluid" id="take-quiz-container">
-          <div className="row mt-5">
-            <div className="col-sm-8 offset-sm-2">
-              <div className="profile-name" id="take-quiz-title">{quiz.title}</div>
-              <div className="profile-email" id="take-quiz-description">{quiz.description}</div>
-            </div>
-          </div>
+          <div className="profile-name" id="take-quiz-title">{quiz.title}</div>
+          <div className="profile-email" id="take-quiz-description">{quiz.description}</div>
 
           <div className="row mt-5">
             {quiz.questions.map((question) => (
