@@ -11,10 +11,8 @@ const QuizTaken = (props) => {
         checkLogin={props.checkLogin}
         onLogout={props.onLogout}
       />
-      <div className="container fluid">
-        <div className="row">
-          <div
-            className="col-sm-12"
+      <div className="quiz-done-page-container">
+          <div className="solved-question-container"
             style={{
               fontFamily: `'Lexend Deca', sans-serif`,
               fontSize: "36px",
@@ -25,34 +23,22 @@ const QuizTaken = (props) => {
           >
             You solved {quiz.solved} out of {quiz.total_questions}.
           </div>
-        </div>
-        <div className="row pt-3">
           <div
             className="col-sm-12"
             style={{
               fontFamily: `'Roboto', sans-serif`,
               fontSize: "18px",
-              color: "var(--quizcraft-light-purple)",
+              color: "var(--blue-grade5)",
               textAlign: "center",
             }}
           >
             Your response has been successfully submitted.
-          </div>
         </div>
-        <div className="row">
-          <div
-            className="col-sm-12 mt-5"
-            style={{
-              textAlign: "center",
-            }}
-          >
             <Link to="/dashboard">
-              <span className="back-to-home ">
+              <span id="quiz-submit-go-to-dash">
                 Go to Dashboard
               </span>
             </Link>
-          </div>
-        </div>
       </div>
     </React.Fragment>
   );

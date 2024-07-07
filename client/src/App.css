@@ -878,3 +878,33 @@ table {
 #give-quiz-option{
   color: var(--black);
 }
+
+#quiz-submit-go-to-dash{
+  display: flex;
+  flex-direction: row;
+  color: var(--black);
+  background-color: var(--quizcraft-orange);
+  font-family: "Lexend Deca", sans-serif;
+  padding: 0.5vh 0.5vw;
+  width: 9vw;
+  height: min-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 4vh;
+}
+
+#quiz-submit-go-to-dash:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-done-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solved-question-container{
+  display: flex;
+  flex-direction: row;
+}
