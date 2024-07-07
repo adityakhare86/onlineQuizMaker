@@ -885,6 +885,7 @@ table {
   justify-content: center;
   border-radius: 8px;
   margin-top: 4vh;
+  transition: all 0.3s ease;
 }
 
 #quiz-submit-go-to-dash:hover{
@@ -895,9 +896,24 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: var(--blue-grade2);
+  margin-top: 10vh;
+  margin-left: 30vw;
+  border-radius: 22px;
+  width: 40vw;
+  padding: 4vh 4vw;
 }
 
 .solved-question-container{
   display: flex;
   flex-direction: row;
+}
+
+.color-change-th{
+  color:#0c5d6f;
+}
+
+.curated-row-colour-changer{
+  color: #0c5d6f;
 }

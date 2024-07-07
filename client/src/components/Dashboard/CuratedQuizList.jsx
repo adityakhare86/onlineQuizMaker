@@ -12,12 +12,12 @@ const CuratedQuizList = (props) => {
       <table className="table mt-4">
         <thead className="count-title">
           <tr>
-            <th scope="col">Serial</th>
-            <th scope="col">Title</th>
-            <th scope="col">Created at</th>
-            <th scope="col">Total Participants</th>
-            <th scope="col" className="wide-column">Total Perfect Scores</th>
-            <th scope="col">Quiz Code</th>
+            <th scope="col" className="color-change-th">Serial</th>
+            <th scope="col" className="color-change-th">Title</th>
+            <th scope="col" className="color-change-th">Created at</th>
+            <th scope="col" className="color-change-th">Total Participants</th>
+            <th scope="col" className="wide-column color-change-th">Total Perfect Scores</th>
+            <th scope="col" className="color-change-th">Quiz Code</th>
           </tr>
         </thead>
         <tbody>

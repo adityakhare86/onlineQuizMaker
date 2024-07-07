@@ -17,7 +17,6 @@ const QuizTaken = (props) => {
               fontFamily: `'Lexend Deca', sans-serif`,
               fontSize: "36px",
               color: "var(--quizcraft-light)",
-              marginTop: "30vh",
               textAlign: "center",
             }}
           >
