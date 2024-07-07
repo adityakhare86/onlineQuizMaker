@@ -748,6 +748,23 @@ table {
   flex-direction: row;
 }
 
+.super-quiz-container{
+  display: flex;
+  flex-direction: column;
+}
+.super-quiz-container::after {
+  content: '';
+  display: inline-block;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+  height: 1px;
+  background: radial-gradient(circle, rgba(47, 102, 149, 0.5), transparent);
+  filter: blur(1px);
+  margin-top: 1vh;
+  margin-bottom: 2.5vh;
+}
+
 .question-changes-container{
   display: flex;
   flex-direction: column;
@@ -851,4 +868,9 @@ table {
 .quiz-question-container{
   margin-left: 5vw;
   margin-bottom: 1.5vh;
+}
+
+.seperator{
+  background-color: var(--blue-grade6);
+  border-radius: 90px;
 }

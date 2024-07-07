@@ -21,55 +21,57 @@ const Question = (props) => {
 
   const { question } = props;
   return (
-      <div className="question-container">
-        <div className="question-and-select-answer-container">
-          <input
-            type="text"
-            className="profile-name input-question-title"
-            placeholder="Question ?"
-            value={question.title}
-            onChange={handleTitleChange}
-          />
-          {question.options.map((option) => (
-            <Option
-              key={option.id}
-              id={option.id}
-              value={option.value}
-              onChange={handleOptionChange}
-              onDelete={handleOptionRemove}
+      <div className="super-quiz-container">
+        <div className="question-container">
+          <div className="question-and-select-answer-container">
+            <input
+              type="text"
+              className="profile-name input-question-title"
+              placeholder="Question ?"
+              value={question.title}
+              onChange={handleTitleChange}
             />
-          ))}
-          <div className="select-answer-container">
-            <label className="option-label">[Answer]</label>
-            <select
-              defaultValue=""
-              className="option-dropdown"
-              onChange={handleSelectAnswer}
-              >
-              <option value="" disabled hidden>
-                Select Answer
-              </option>
-              {question.options.map((option) => (
-                <option key={option.id} value={option.id}>
-                  {option.id + 1 + ": " + option.value}
+            {question.options.map((option) => (
+              <Option
+                key={option.id}
+                id={option.id}
+                value={option.value}
+                onChange={handleOptionChange}
+                onDelete={handleOptionRemove}
+              />
+            ))}
+            <div className="select-answer-container">
+              <label className="option-label">[Answer]</label>
+              <select
+                defaultValue=""
+                className="option-dropdown"
+                onChange={handleSelectAnswer}
+                >
+                <option value="" disabled hidden>
+                  Select Answer
                 </option>
-              ))}
-            </select>
+                {question.options.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.id + 1 + ": " + option.value}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        </div>
-        <div className="question-changes-container">
-          <button
-            className="remove-button"
-            onClick={() => props.onRemove(question.id)}
-          >
-            <Emoji emoji="🗑️" /> Remove
-          </button>
-          <button
-            className="add-button"
-            onClick={() => props.onAddOption(question.id)}
-          >
-            <Emoji emoji="✔️" /> Add Option
-          </button>
+          <div className="question-changes-container">
+            <button
+              className="remove-button"
+              onClick={() => props.onRemove(question.id)}
+            >
+              <Emoji emoji="🗑️" /> Remove
+            </button>
+            <button
+              className="add-button"
+              onClick={() => props.onAddOption(question.id)}
+            >
+              <Emoji emoji="✔️" /> Add Option
+            </button>
+          </div>
         </div>
       </div>
   );
