@@ -76,7 +76,6 @@
 }
 .login-button:hover {
   color: var(--quizcraft-bg-dark);
-  background-color: var(--quizcraft-orange);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .login-button:active {
@@ -95,22 +94,12 @@
 
 }
 
-.register-button:hover {
-  background-color: var(--quizcraft-dark-purple);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
-}
-.register-button:active {
-  border: 2px solid var(--quizcraft-deep-purple);
-  background-color: var(--quizcraft-bg-dark);
-}
-
 .dashboard-button-landing{
   color: #000;
   transition: all 0.3s ease;
 }
 
 .dashboard-button-landing:hover{
-  background-color: rgb(7, 208, 7);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -120,7 +109,6 @@
 }
 
 .dashboard-button-login:hover{
-  background-color: rgb(7, 208, 7);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -137,7 +125,6 @@
 
 .dashboard-button-register:hover {
   color: var(--black);
-  background-color: var(--quizcraft-light-green); 
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -152,7 +139,6 @@
 }
 
 .login-button-login:hover{
-  background-color: var(--quizcraft-light-green);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -254,7 +240,6 @@
 
 .new-user-register-here:hover{
   text-decoration:none;
-  background-color: var(--quizcraft-light-green);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -313,7 +298,6 @@
 }
 
 .tool-button:hover {
-  background-color: rgb(1, 186, 1);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   -webkit-transition: background-color 500ms ease;
   -ms-transition: background-color 500ms ease;
@@ -675,7 +659,6 @@ table {
 }
 
 .registration-form-register-button:hover{
-  background-color: var(--quizcraft-light-green);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -696,7 +679,7 @@ table {
 }
 
 .already-registered:hover{
-  background-color: var(--quizcraft-light-green);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .go-to-login-reg-done{
@@ -708,11 +691,9 @@ table {
 #add-question-button{
   background-color: var(--quizcraft-light-blue);
   transition: all 0.3s ease;
-
 }
 
 #add-question-button:hover{
-  background-color: var(--quizcraft-light-green);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
