@@ -114,9 +114,21 @@ class QuizBuilder extends Component {
   };
 
   handleSubmitQuiz = () => {
-    const { questions } = this.state;
+    const { title, questions } = this.state;
+
+    // Validate quiz title
+    if (title.trim() === "") {
+      this.setState({ errorMessage: "Quiz title is required." });
+      return;
+    }
+
+    // Validate each question
     for (let i = 0; i < questions.length; i++) {
       const question = questions[i];
+      if (question.title.trim() === "") {
+        this.setState({ errorMessage: `Question ${i + 1} title is required.` });
+        return;
+      }
       if (question.options.length === 0) {
         this.setState({ errorMessage: `Question ${i + 1} has no options.` });
         return;
@@ -127,6 +139,7 @@ class QuizBuilder extends Component {
       }
     }
 
+    // Submit the quiz
     QuizService.submit(this.state).then((response) => {
       if (response === false) {
         this.setState({ errorMessage: "Failed to submit the quiz." });
@@ -152,40 +165,40 @@ class QuizBuilder extends Component {
           onLogout={this.props.onLogout}
         />
         <div className="container-fluid quiz-creator-container">
-              <input
-                className="profile-name"
-                id="input-quiz-title"
-                placeholder="Click to add quiz title"
-                value={this.state.title}
-                onChange={this.handleTitleChange}
-              />
-              <input
-                className="profile-email input-quiz-desc mt-1"
-                placeholder="Click to add quiz description"
-                value={this.state.description}
-                onChange={this.handleDescriptionChange}
-              />
-            {this.state.questions.map((question) => (
-              <Question
-                key={question.id}
-                question={question}
-                onTitleChange={this.handleQuestionTitleChange}
-                onRemove={this.handleRemoveQuestion}
-                onAddOption={this.handleQuestionAddOption}
-                onOptionChange={this.handleOptionChange}
-                onOptionRemove={this.handleRemoveOption}
-                onSelectAnswer={this.handleSelectAnswer}
-              />
-            ))}
+          <input
+            className="profile-name"
+            id="input-quiz-title"
+            placeholder="Click to add quiz title"
+            value={this.state.title}
+            onChange={this.handleTitleChange}
+          />
+          <input
+            className="profile-email input-quiz-desc mt-1"
+            placeholder="Click to add quiz description"
+            value={this.state.description}
+            onChange={this.handleDescriptionChange}
+          />
+          {this.state.questions.map((question) => (
+            <Question
+              key={question.id}
+              question={question}
+              onTitleChange={this.handleQuestionTitleChange}
+              onRemove={this.handleRemoveQuestion}
+              onAddOption={this.handleQuestionAddOption}
+              onOptionChange={this.handleOptionChange}
+              onOptionRemove={this.handleRemoveOption}
+              onSelectAnswer={this.handleSelectAnswer}
+            />
+          ))}
 
           {/* add quiz button  */}
-          <div class="quiz-creator-button-container">
+          <div className="quiz-creator-button-container">
             <button className="tool-button" id="add-question-button"
-            onClick={this.handleAddQuestion}>
+              onClick={this.handleAddQuestion}>
               <Emoji emoji="➕" /> Add Question
             </button>
             <button className="tool-button" id="reset-quiz-button"
-            onClick={this.handleResetAll}>
+              onClick={this.handleResetAll}>
               <Emoji emoji="🚫" /> Reset Quiz
             </button>
             <button className="tool-button" onClick={this.handleSubmitQuiz}>
