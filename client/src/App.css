@@ -20,6 +20,7 @@
   --quizcraft-light-green: rgb(56, 212, 56);
   --quizcraft-light-red: rgb(218, 77, 105);
 
+  --container-backgrounds: #7cd6de;
   --placeholder: rgb(91, 116, 117);
   --black: #000;
 }
@@ -579,20 +580,25 @@ table {
 
 #dashboard-container-fluid{
   background-color: var(--blue-grade2);
-  width: 86vw;
   height: fit-content;
   margin-top: 40px;
-  border-radius: 8px;
+  border-radius: 22px;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  align-self: center;
   row-gap: 12vh;
+  padding-top: 6vh;
+  padding-left: 3.5vw;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+  overflow-x: hidden;
 }
 
 .dashboard-container-fluid1{
   display: flex;
   flex-direction: row;
-  column-gap: 10vw;
+  column-gap: 6vw;
 }
 
 .dashboard-container-fluid2{
@@ -604,10 +610,16 @@ table {
 
 .dashboard-profile{
   width: 40vw;
+  background-color: var(--container-backgrounds);
+  border-radius: 22px;
+  padding: 2vh 2vw;
 }
 
 .dashboard-quizzer-tools{
   width: 30vw;
+  background-color: var(--container-backgrounds);
+  border-radius: 22px;
+  padding: 2vh 2vw;
 }
 
 .login-container-fluid{

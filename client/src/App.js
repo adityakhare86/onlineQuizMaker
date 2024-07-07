@@ -76,11 +76,6 @@ class App extends Component {
     // }
     return (
       <Router>
-        {/* <NavBar
-          isLoggedIn={this.state.isLoggedIn}
-          checkLogin={this.checkLogin}
-          onLogout={this.handleLogout}
-        /> */}
         <Switch>
           <Route
             exact

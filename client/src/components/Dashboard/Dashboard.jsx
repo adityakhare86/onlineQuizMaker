@@ -51,10 +51,10 @@ class Dashboard extends Component {
           checkLogin={this.props.checkLogin}
           onLogout={this.props.onLogout}
         />
-        <div className="container-fluid" id="dashboard-container-fluid">
+        <div id="dashboard-container-fluid">
           <div className="dashboard-container-fluid1">
             <Profile
-              classes="section dashboard-profile"
+              classes="dashboard-profile"
               name={this.state.user.name}
               email={this.state.user.email}
               curated={this.state.user.quizCurated}
@@ -64,7 +64,7 @@ class Dashboard extends Component {
 
             {/* Tools section  */}
             <Tools
-              classes="section dashboard-quizzer-tools"
+              classes="dashboard-quizzer-tools"
               title="Quizzer Tools"
             />
             {/* Tools section  end*/}
@@ -72,7 +72,7 @@ class Dashboard extends Component {
             <div className="dashboard-container-fluid2">
               <CuratedQuizList
                 // use this class only if you're desperate: curated-quiz-section
-  k              classes="curated-quiz-section section"
+  k              classes="curated-quiz-section"
                 id="dashboard-cont-child3"
                 quizzes={this.props.quizzes}
               />
