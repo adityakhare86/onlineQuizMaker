@@ -822,3 +822,25 @@ table {
   display: flex;
   flex-direction: row;
 }
+
+#take-quiz-container{
+  background-color: var(--blue-grade2);
+  padding: 0.5%;
+  width: 70vw;
+  border-radius: 22px;
+  margin-top: 2vh;
+  margin-bottom: 6vh;
+}
+
+#take-quiz-title{
+  font-size: 38px;
+}
+
+#take-quiz-description{
+  font-size: 18px;
+}
+
+#quiz-question-option{
+  text-decoration: none;
+  border: none;
+}

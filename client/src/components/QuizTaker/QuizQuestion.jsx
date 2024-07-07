@@ -8,8 +8,6 @@ const QuizQuestion = (props) => {
 
   const { question } = props;
   return (
-    <div className="col-sm-8 offset-sm-2 section mt-4">
-      <div className="row">
         <div className="col-sm-10">
           <div className="profile-name">{question.title}</div>
           <div className="row pt-3">
@@ -43,22 +41,6 @@ const QuizQuestion = (props) => {
             </div>
           </div>
         </div>
-        {/* <div className="col-sm-2">
-          <button
-            className="remove-button"
-            onClick={() => props.onRemove(question.id)}
-          >
-            <Emoji emoji="🗑️" /> Remove
-          </button>
-          <button
-            className="add-button"
-            onClick={() => props.onAddOption(question.id)}
-          >
-            <Emoji emoji="✍️" /> Add Option
-          </button>
-        </div> */}
-      </div>
-    </div>
   );
 };
 
