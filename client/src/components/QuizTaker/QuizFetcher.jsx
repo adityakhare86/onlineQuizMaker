@@ -46,17 +46,9 @@ class QuizFetcher extends Component {
           checkLogin={this.props.checkLogin}
           onLogout={this.props.onLogout}
         />
-        <div className="container-fluid">
-          <div className="row mt-5">
-            <div
-              className="col-sm-6 offset-sm-3 section"
-              style={{
-                textAlign: "center",
-              }}
-            >
-              <div className="profile-name" id="enter-quiz-code">Search for a Quiz</div>
-              <div className="profile-email pb-3">
-              </div>
+        <div className="quiz-fetcher-container">
+            <div className="profile-name" id="enter-quiz-code">Search for a Quiz</div>
+            <div className="quiz-fetcher-search-container">
               <input
                 className="quiz-code-input"
                 type="text"
@@ -68,29 +60,28 @@ class QuizFetcher extends Component {
               <button className="tool-button" onClick={this.handleFindQuiz}>
                 <Emoji emoji="🔎" /> Find Quiz
               </button>
-              {this.state.error && (
-                <div id="no-quiz-found">
-                  No quiz found, please enter a valid quiz code.
-                </div>
-              )}
-              {!this.state.error && this.state.quiz && (
-                <>
-                  <QuizHeader
-                    title={this.state.quiz.title}
-                    description={this.state.quiz.description}
-                  />
-                  <div className="tooltip-wrapper">
-                    <Link to="/quiz-taker">
-                      <button className="tool-button">
-                        <Emoji emoji="⚔️" /> Proceed To Battle
-                      </button>
-                    </Link>
-                  </div>
-                </>
-              )}
             </div>
+            {this.state.error && (
+              <div id="no-quiz-found">
+                No quiz found, please enter a valid quiz code.
+              </div>
+            )}
+            {!this.state.error && this.state.quiz && (
+              <>
+                <QuizHeader
+                  title={this.state.quiz.title}
+                  description={this.state.quiz.description}
+                />
+                <div className="tooltip-wrapper">
+                  <Link to="/quiz-taker">
+                    <button className="tool-button">
+                      <Emoji emoji="⚔️" /> Proceed To Battle
+                    </button>
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
-        </div>
       </React.Fragment>
     );
   }
