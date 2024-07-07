@@ -794,6 +794,7 @@ table {
   background-color: var(--blue-grade2);
   width: 50%;
   height: 25vh;
+  min-height: max-content;
   margin: auto;
   margin-top: 10vh;
   display: flex;
@@ -806,7 +807,19 @@ table {
 
 .quiz-fetcher-search-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 3vh;
+  min-height: max -content;
+}
+
+.fetched-quizzes-list-container{
+  display: flex;
+  flex-direction: column;
+  min-height: max-content;
+}
+
+.small-container{
+  display: flex;
+  flex-direction: row;
 }

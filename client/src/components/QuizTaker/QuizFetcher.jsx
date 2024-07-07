@@ -49,38 +49,42 @@ class QuizFetcher extends Component {
         <div className="quiz-fetcher-container">
             <div className="profile-name" id="enter-quiz-code">Search for a Quiz</div>
             <div className="quiz-fetcher-search-container">
-              <input
-                className="quiz-code-input"
-                type="text"
-                spellCheck="false"
-                placeholder="Enter quiz code"
-                value={this.state.quizCode}
-                onChange={this.handleQuizCodeInput}
-              />
-              <button className="tool-button" onClick={this.handleFindQuiz}>
-                <Emoji emoji="🔎" /> Find Quiz
-              </button>
-            </div>
-            {this.state.error && (
-              <div id="no-quiz-found">
-                No quiz found, please enter a valid quiz code.
-              </div>
-            )}
-            {!this.state.error && this.state.quiz && (
-              <>
-                <QuizHeader
-                  title={this.state.quiz.title}
-                  description={this.state.quiz.description}
+              <div className="small-container">
+                <input
+                  className="quiz-code-input"
+                  type="text"
+                  spellCheck="false"
+                  placeholder="Enter quiz code"
+                  value={this.state.quizCode}
+                  onChange={this.handleQuizCodeInput}
                 />
-                <div className="tooltip-wrapper">
-                  <Link to="/quiz-taker">
-                    <button className="tool-button">
-                      <Emoji emoji="⚔️" /> Proceed To Battle
-                    </button>
-                  </Link>
+                <button className="tool-button" onClick={this.handleFindQuiz}>
+                  <Emoji emoji="🔎" /> Find Quiz
+                </button>
+              </div>
+              <div className="fetched-quizzes-list-container">
+                {this.state.error && (
+                <div id="no-quiz-found">
+                  No quiz found, please enter a valid quiz code.
                 </div>
-              </>
-            )}
+              )}
+              {!this.state.error && this.state.quiz && (
+                <>
+                  <QuizHeader
+                    title={this.state.quiz.title}
+                    description={this.state.quiz.description}
+                  />
+                  <div className="tooltip-wrapper">
+                    <Link to="/quiz-taker">
+                      <button className="tool-button">
+                        <Emoji emoji="⚔️" /> Proceed To Battle
+                      </button>
+                    </Link>
+                  </div>
+                </>
+              )}
+              </div>
+            </div>
           </div>
       </React.Fragment>
     );
