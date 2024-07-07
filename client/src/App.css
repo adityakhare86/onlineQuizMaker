@@ -402,12 +402,12 @@ button:focus {
 }
 
 .input-question-title:hover {
-  border-bottom: 2px solid var(--quizcraft-bg-dark);
+  border-bottom: 2px solid var(--blue-grade2);
 }
 
 .input-question-title:active,
 .input-question-title:focus {
-  border-bottom: 2px solid var(--quizcraft-deep-purple);
+  border-bottom: 2px solid var(--blue-grade3);
 }
 
 .option-name {
@@ -444,7 +444,7 @@ button:focus {
   background: none;
   letter-spacing: 0.03em;
   border: none;
-  border-bottom: 2px solid var(--quizcraft-light-purple);
+  border-bottom: 2px solid var(--blue-grade2);
   width: calc(44vw);
   margin-left: 1em;
   margin-right: 1em;
@@ -454,7 +454,7 @@ button:focus {
 .option-input:hover,
 .option-input:active,
 .option-input:focus {
-  border-bottom: 2px solid var(--quizcraft-dark-purple);
+  border-bottom: 2px solid var(--blue-grade3);
 }
 
 .remove-button {
@@ -655,7 +655,7 @@ table {
   width: 18vw;
   height: 5vh;
   margin-right: 1.4vw;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .registration-form-register-button:hover{
@@ -675,7 +675,7 @@ table {
   width: 18vw;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .already-registered:hover{
