@@ -77,7 +77,7 @@ class QuizFetcher extends Component {
                   <div className="tooltip-wrapper">
                     <Link to="/quiz-taker">
                       <button className="tool-button">
-                        <Emoji emoji="⚔️" /> Proceed To Battle
+                        <Emoji emoji="🎯" /> Take Quiz
                       </button>
                     </Link>
                   </div>
