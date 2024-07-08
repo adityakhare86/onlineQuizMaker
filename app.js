@@ -8,8 +8,9 @@ app.use(
   cors({
     exposedHeaders: ["auth-token"],
     origin: 'https://quiz-craft-fe.vercel.app/',
-    methods: ["POST", "GET"],
-    credentials: true
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204
   })
 );
 app.use(express.json());
