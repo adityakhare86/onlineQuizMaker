@@ -50,7 +50,7 @@ class Registration extends Component {
           checkLogin={this.props.checkLogin}
           onLogout={this.props.onLogout}
         />
-        <div className="container-fluid container-fluid-registration">
+        <div className="container-fluid" id="container-fluid-registration">
           <div className="auth-title mt-1">Register for a New Account</div>
           <form onSubmit={this.handleRegistrationSubmit}>
             <div className="form-group registration-form">
