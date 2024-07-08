@@ -7,7 +7,7 @@ require("dotenv/config");
 app.use(
   cors({
     exposedHeaders: ["auth-token"],
-    origin: 'https://your-frontend-project-name.vercel.app'
+    origin: 'https://quiz-craft-fe.vercel.app/'
   })
 );
 app.use(express.json());

@@ -4,7 +4,7 @@ require("dotenv").config();
 const AuthService = {
   register: async (request) => {
     return await axios
-      .post("https://quiz-craft-fe.vercel.app"+"/api/v1/auth/registration", request)
+      .post("https://quiz-craft-be.vercel.app"+"/api/v1/auth/registration", request)
       .then((response) => {
         return true;
       })
@@ -14,7 +14,7 @@ const AuthService = {
   },
   login: async (request) => {
     return await axios
-      .post("https://quiz-craft-fe.vercel.app"+"/api/v1/auth/login", request)
+      .post("https://quiz-craft-be.vercel.app"+"/api/v1/auth/login", request)
       .then((response) => {
         const authToken = response.headers["auth-token"];
         sessionStorage.setItem("quizcraft-token", authToken);
