@@ -888,7 +888,7 @@ table {
   background-color: var(--quizcraft-orange);
   font-family: "Lexend Deca", sans-serif;
   padding: 0.5vh 0.5vw;
-  width: 9vw;
+  width: auto;
   height: min-content;
   align-items: center;
   justify-content: center;
