@@ -102,7 +102,7 @@ const QuizDone = (props) => {
             textAlign: "center"
           }}>
             <Link to="/dashboard">
-              <span className="back-to-home" id="go-to-dash-quiz-done">
+              <span id="go-to-dash-quiz-done">
                 Go to Dashboard
               </span>
             </Link>
