@@ -40,7 +40,7 @@ const QuizDone = (props) => {
             style={{
               fontFamily: `'Roboto', sans-serif`,
               fontSize: "18px",
-              color: "var(--quizcraft-light-purple)",
+              color: "#5a8ad6",
               textAlign: "center",
             }}
           >
@@ -97,19 +97,15 @@ const QuizDone = (props) => {
             </div>
           </div>
         )}
-        <div className="row">
-          <div
-            className="col-sm-12 mt-5"
-            style={{
-              textAlign: "center",
-            }}
-          >
+        <div className="row"
+          style={{
+            textAlign: "center"
+          }}>
             <Link to="/dashboard">
-              <span className="back-to-home ">
+              <span className="back-to-home" id="go-to-dash-quiz-done">
                 Go to Dashboard
               </span>
             </Link>
-          </div>
         </div>
       </div>
     </React.Fragment>
