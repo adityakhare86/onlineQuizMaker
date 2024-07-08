@@ -636,6 +636,7 @@ table {
   display: flex;
   flex-direction: column;
   margin-top: 12vh;
+  margin-bottom: 6vh;
   background-color: var(--blue-grade2);
   width: 45vw;
   /* height: 60vh; */
