@@ -966,4 +966,5 @@ table {
 
 #curated-quiz-list-table{
   border-spacing: 0;
+  border-color: var(--blue-grade2);
 }
