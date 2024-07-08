@@ -35,6 +35,7 @@ class Dashboard extends Component {
     QuizService.findByUser(user_id).then((response) => {
       if (response === false) {
       } else {
+        console.log(response);
         this.props.onQuizLoad(response);
       }
     });
