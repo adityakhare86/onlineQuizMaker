@@ -950,6 +950,7 @@ table {
 }
 
 #go-to-dash-quiz-done{
+  color: var(--black);
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
   padding: 1vh 1vw;

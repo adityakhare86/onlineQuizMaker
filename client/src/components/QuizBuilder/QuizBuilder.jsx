@@ -122,6 +122,12 @@ class QuizBuilder extends Component {
       return;
     }
 
+    // Validate that there is at least one question
+    if (questions.length === 0) {
+      this.setState({ errorMessage: "The quiz must have at least one question." });
+      return;
+    }
+
     // Validate each question
     for (let i = 0; i < questions.length; i++) {
       const question = questions[i];
