@@ -226,7 +226,7 @@
 .new-user-register-here{
   background-color: var(--quizcraft-light-blue);
   width: 17vw;
-  height: 4.6vh;
+  height: auto;
   margin-top: 4vh;
   border-radius: 8px;
   font-family: "Lexend Deca", sans-serif;
@@ -610,7 +610,7 @@ table {
   margin-top: 12vh;
   background-color: var(--blue-grade2);
   width: 45vw;
-  height: 50vh;
+  height: auto;
   padding: 4vh 4vw 4vh 4vw;
   border-radius: 8px;
 }
@@ -630,6 +630,7 @@ table {
 .login-page-buttons-cont{
   display: flex;
   flex-direction: row;
+  height: auto;
 }
 
 #container-fluid-registration{
