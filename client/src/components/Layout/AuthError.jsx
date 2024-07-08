@@ -6,9 +6,7 @@ const AuthError = (props) => {
       <div className="col-sm-4 offset-sm-4">
         <span
           className="input-label"
-          style={{
-            color: "",
-          }}
+          id="looks-like-mistake-text"
         >
           {props.text}
         </span>

@@ -935,3 +935,9 @@ table {
   margin-bottom: 2.5vh;
   padding-left: 10vw;
 }
+
+#looks-like-mistake-text{
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
