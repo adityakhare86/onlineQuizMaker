@@ -951,7 +951,7 @@ table {
 
 #go-to-dash-quiz-done{
   background-color: var(--quizcraft-orange);
-  border-radius: 22px;
+  border-radius: 8px;
   padding: 1vh 1vw;
   width: auto;
 }
@@ -960,4 +960,5 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2vh;
 }
