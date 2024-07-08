@@ -726,7 +726,7 @@ table {
 }
 
 .quiz-creator-container{
-  width: 75vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   background-color: var(--blue-grade2);
