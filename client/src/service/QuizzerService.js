@@ -4,7 +4,7 @@ require("dotenv").config();
 const QuizService = {
   getQuizzer: async (user_id, authToken) => { 
     return await axios
-      .get("/api/v1/quizzers/" + user_id, {
+      .get("https://quiz-craft-be.vercel.app"+"/api/v1/quizzers/" + user_id, {
         headers: {
           "auth-token": authToken,
         },

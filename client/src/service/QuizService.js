@@ -6,7 +6,7 @@ const QuizService = {
     const user_id = sessionStorage.getItem("quizcraft-user-id");
     const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
-      .post("/api/v1/quizzes/create/" + user_id, request, {
+      .post("https://quiz-craft-be.vercel.app"+"/api/v1/quizzes/create/" + user_id, request, {
         headers: {
           "auth-token": authToken,
         },
@@ -36,7 +36,7 @@ const QuizService = {
   findById: async (quiz_id) => {
     const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
-      .get("/api/v1/quizzes/" + quiz_id, {
+      .get("https://quiz-craft-be.vercel.app"+"/api/v1/quizzes/" + quiz_id, {
         headers: {
           "auth-token": authToken,
         },
@@ -51,7 +51,7 @@ const QuizService = {
   submitAnswer: async (request) => {
     const user_id = sessionStorage.getItem("quizcraft-user-id");
     const authToken = sessionStorage.getItem("quizcraft-authToken");
-    const uri = "/api/v1/quizzes/submit/" + user_id;
+    const uri = "https://quiz-craft-be.vercel.app"+"/api/v1/quizzes/submit/" + user_id;
     return await axios
       .post(uri, request, {
         headers: {
