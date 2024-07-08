@@ -637,12 +637,14 @@ table {
   background-color: var(--blue-grade2);
   width: 45vw;
   height: 60vh;
+  min-height: max-content;
   padding: 4vh 4vw 4vh 4vw;
   border-radius: 8px;
 }
 
 .registration-form{
   margin-top: 5vh;
+  min-height: max-content;
 }
 
 .registration-form-placeholders{
