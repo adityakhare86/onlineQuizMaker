@@ -634,6 +634,7 @@ table {
 
 #container-fluid-registration{
   display: flex;
+  flex-direction: column;
   margin-top: 12vh;
   background-color: var(--blue-grade2);
   width: 45vw;
