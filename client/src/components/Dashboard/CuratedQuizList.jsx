@@ -9,7 +9,7 @@ const CuratedQuizList = (props) => {
         Quizzes curated by you. Copy and share the code.
       </div>
 
-      <table className="table mt-4">
+      <table className="table mt-4" id="curated-quiz-list-table">
         <thead className="count-title">
           <tr>
             <th scope="col" className="color-change-th">Serial</th>
