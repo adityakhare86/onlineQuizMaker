@@ -135,6 +135,8 @@
   width: 17vw;
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   transition: all 0.3s ease;
 }
 
@@ -235,7 +237,8 @@
   justify-content: center;
   display: flex;
   transition: all 0.3s ease;
-
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .new-user-register-here:hover{
