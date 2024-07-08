@@ -21,7 +21,7 @@ const QuizService = {
   findByUser: async (user_id) => {
     const authToken = sessionStorage.getItem("quizcraft-authToken");
     return await axios
-      .get("/api/v1/quizzes/quizzer/" + user_id, {
+      .get("https://quiz-craft-be.vercel.app"+"/api/v1/quizzes/quizzer/" + user_id, {
         headers: {
           "auth-token": authToken,
         },
