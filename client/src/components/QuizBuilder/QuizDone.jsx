@@ -97,7 +97,7 @@ const QuizDone = (props) => {
             </div>
           </div>
         )}
-        <div className="row"
+        <div className="row go-to-dash-quiz-done"
           style={{
             textAlign: "center"
           }}>
