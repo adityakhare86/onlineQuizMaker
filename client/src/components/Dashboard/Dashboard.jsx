@@ -33,9 +33,9 @@ class Dashboard extends Component {
   getQuizzes = () => {
     const user_id = sessionStorage.getItem("quizcraft-user-id");
     QuizService.findByUser(user_id).then((response) => {
+      console.log(response);
       if (response === false) {
       } else {
-        console.log(response);
         this.props.onQuizLoad(response);
       }
     });
