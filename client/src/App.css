@@ -940,4 +940,5 @@ table {
   display: flex;
   flex-direction: column;
   color: red;
+  padding: 2vh 2vw;
 }
