@@ -4,6 +4,8 @@ const jwt = require("jsonwebtoken");
 
 // database schema
 const User = require("../model/User");
+const Quizzer = require("../model/Quizzer");
+
 
 const AuthController = {
   // validation schema
@@ -40,10 +42,16 @@ const AuthController = {
       const savedUser = await user.save();
       const { _id } = savedUser;
 
+      const quizzer = new Quizzer({
+        _id: _id,
+        name: name,
+        email: email,
+      });
+      const savedQuizzer = await quizzer.save();
+
       // send a successful response
-      return res.status(201).send({ _id, name, email });
+      return res.status(201).send("user and quizzer created successfully");
     } catch (err) {
-      console.error(err);
       return res.status(500).send("Internal Server Error");
     }
   },
