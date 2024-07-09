@@ -14,9 +14,9 @@ const QuizzerController = {
       email: Joi.string().email().required(),
     });
 
-    console.log(_id); console.log(name); console.log(email);
-
+    
     try {
+      console.log(_id); console.log(name); console.log(email);
       const quizzer = new Quizzer({
         _id: _id,
         name: name,
