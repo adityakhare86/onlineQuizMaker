@@ -16,23 +16,17 @@ const QuizzerController = {
 
     console.log(_id); console.log(name); console.log(email);
 
-    const { error } = quizzerSchema.validate({ _id, name, email });
-    if (error) {
-      console.log("Validation error", error);
-    }
-    else{
-      try {
-        const quizzer = new Quizzer({
-          _id: _id,
-          name: name,
-          email: email,
-        });
-        const savedQuizzer = await quizzer.save();
-        return res.status(200).send(savedQuizzer);
-      } catch (err) {
-        console.log("Error", err);
-        return res.status(400).send("Does not exist.");
-      }
+    try {
+      const quizzer = new Quizzer({
+        _id: _id,
+        name: name,
+        email: email,
+      });
+      const savedQuizzer = await quizzer.save();
+      return res.status(200).send(savedQuizzer);
+    } catch (err) {
+      console.log("Error", err);
+      return res.status(400).send("Does not exist.");
     }
   },
 
