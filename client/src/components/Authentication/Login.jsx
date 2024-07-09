@@ -26,6 +26,7 @@ class Login extends Component {
   handleLoginSubmit = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
+    console.log("Starting user login");
     AuthService.login({ email, password }).then((response) => {
       if (response === false) {
         this.setState({ error: true });

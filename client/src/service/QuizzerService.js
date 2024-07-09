@@ -13,6 +13,7 @@ const QuizService = {
         return { ...response.data };
       })
       .catch((err) => {
+        console.log("Error throw by QuizService at getting Quizzer");
         console.log("Error", err);
         return false;
       });

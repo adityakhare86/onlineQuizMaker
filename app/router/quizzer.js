@@ -9,6 +9,7 @@ router.get("/data", AuthController.verifyToken, async (req, res, next) => {
 
 // get quizzer profile
 router.get("/:id", AuthController.verifyToken, async (req, res, next) => {
+  console.log("Redirecting to get quizzer profile");
   await QuizzerController.get(req, res, next);
 });
 

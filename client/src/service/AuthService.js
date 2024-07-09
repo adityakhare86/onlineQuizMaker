@@ -21,6 +21,7 @@ const AuthService = {
         return { ...response.data, authToken };
       })
       .catch((err) => {
+        console.log("Error throw by Auth Service in login");
         console.log("Error", err);
         return false;
       });
