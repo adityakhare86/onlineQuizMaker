@@ -27,7 +27,7 @@ const QuizzerController = {
         return res.status(200).send(savedQuizzer);
       } catch (err) {
         console.log("Error", err);
-        return res.status(400).send("Does not exist.");
+        return res.status(409).send("Quizzer couldn't be created");
       }
     }
   },
@@ -88,12 +88,6 @@ const QuizzerController = {
       quizzer.quizFlawless += flawless; // + 0 or 1
 
       const updatedQuizzer = await Quizzer.findByIdAndUpdate(user_id, quizzer);
-      // const result1 = await Quizzer.findByIdAndUpdate(user_id, {
-      //   $inc: { quizAttended: 1 },
-      // });
-      // const result2 = await Quizzer.findByIdAndUpdate(user_id, {
-      //   $inc: { quizFlawless: flawless },
-      // });
       return updatedQuizzer;
     } catch (err) {
       console.log("Error", err);
