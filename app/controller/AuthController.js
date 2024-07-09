@@ -42,14 +42,17 @@ const AuthController = {
       const savedUser = await user.save();
       const { _id } = savedUser;
 
-      const quizzerSchema = Joi.object({
+      const quizzerRegistrationSchema = Joi.object({
         _id: Joi.string().required(),
         name: Joi.string().required(),
         email: Joi.string().email().required(),
       });
   
-      const { error2 } = quizzerSchema.validate({ _id, name, email });
-      if (error2) return res.status(408).send("Quizzer couldn't be validated");
+      const { error2 } = quizzerRegistrationSchema.validate({ _id, name, email });
+      if (error2) {
+        console.error("Quizzer couldn't be validated", error2);
+        return res.status(408).send("Quizzer couldn't be validated");
+      }
       try {
         const quizzer = new Quizzer({
           _id: _id,
@@ -57,8 +60,9 @@ const AuthController = {
           email: email,
         });
         const savedQuizzer = await quizzer.save();
+        console.log("Quizzer saved successfully:", savedQuizzer);
       } catch (err) {
-        console.log("Error", err);
+        console.error("Quizzer creation error: ", err);
         return res.status(409).send("Quizzer couldn't be created");
       }
 
