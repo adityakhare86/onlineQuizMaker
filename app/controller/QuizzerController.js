@@ -14,17 +14,22 @@ const QuizzerController = {
 
     
     try {
-      console.log(_id); console.log(name); console.log(email);
+      const { error } = quizzerSchema.validate({ _id, name, email });
+      if (error) {
+        throw new Error(error.details[0].message);
+      }
+
       const quizzer = new Quizzer({
-        _id: _id,
-        name: name,
-        email: email,
+        _id,
+        name,
+        email,
       });
+
       const savedQuizzer = await quizzer.save();
       return res.status(200).send(savedQuizzer);
     } catch (err) {
       console.log("Error", err);
-      return res.status(400).send("Does not exist.");
+      return res.status(400).send("Quizzer creation failed.");
     }
   },
 

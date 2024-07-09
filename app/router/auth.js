@@ -16,6 +16,7 @@ router.post("/login", async (req, res, next) => {
 router.post("/registration", async (req, res, next) => {
   try {
     const user = await AuthController.registerUser(req, res, next);
+    console.log(user);
     if(user) {
       req.body = user;
       await QuizzerController.createQuizzer(req, res, next);
