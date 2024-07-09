@@ -32,7 +32,6 @@ class Login extends Component {
       } else {
         sessionStorage.setItem("quizcraft-authToken", response.authToken);
         sessionStorage.setItem("quizcraft-user-id", response._id);
-        console.log(response.authToken); console.log(response._id);
 
         // get Quizzer profile
         QuizzerService.getQuizzer(response._id, response.authToken).then(

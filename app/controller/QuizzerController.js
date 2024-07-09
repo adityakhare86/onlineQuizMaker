@@ -34,6 +34,7 @@ const QuizzerController = {
 
   get: async (req, res, next) => {
     try {
+      console.log(req.param);
       const quizzer = await Quizzer.findOne({ _id: req.params.id });
       if (quizzer) {
         const {
