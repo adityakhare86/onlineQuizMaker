@@ -26,10 +26,8 @@ const QuizzerController = {
       });
 
       const savedQuizzer = await quizzer.save();
-      return res.status(200).send(savedQuizzer);
     } catch (err) {
       console.log("Error", err);
-      return res.status(400).send("Quizzer creation failed.");
     }
   },
 
