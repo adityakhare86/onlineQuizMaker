@@ -4,6 +4,7 @@ const Quizzer = require("../model/Quizzer");
 
 const QuizzerController = {
   createQuizzer: async (req, res, next) => {
+    console.log("Quizzer creation in process");
     const { _id, name, email } = req.body;
 
     const quizzerSchema = Joi.object({

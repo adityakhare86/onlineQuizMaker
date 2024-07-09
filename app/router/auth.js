@@ -16,8 +16,11 @@ router.post("/login", async (req, res, next) => {
 router.post("/registration", async (req, res, next) => {
   try {
     const user = await AuthController.registerUser(req, res, next);
-    if (user) {
+    console.log("Checking if user is valid");
+    console.log(user);
+    if(user) {
       req.body = user;
+      console.log("Creating quizzer");
       await QuizzerController.createQuizzer(req, res, next);
     }
   } catch (err) {
