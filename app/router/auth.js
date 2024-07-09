@@ -2,11 +2,9 @@ const express = require("express");
 const router = express.Router();
 const AuthController = require("../controller/AuthController");
 const QuizzerController = require("../controller/QuizzerController");
-
 router.get("/", AuthController.verifyToken, (req, res, next) => {
   res.send("Hello From AUTH!");
 });
-
 // user login
 router.post("/login", async (req, res, next) => {
   await AuthController.loginUser(req, res, next);
@@ -16,8 +14,7 @@ router.post("/login", async (req, res, next) => {
 router.post("/registration", async (req, res, next) => {
   try {
     const user = await AuthController.registerUser(req, res, next);
-    console.log(user);
-    if(user) {
+    if (user) {
       req.body = user;
       await QuizzerController.createQuizzer(req, res, next);
     }

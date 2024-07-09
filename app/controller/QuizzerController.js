@@ -1,39 +1,38 @@
 const Joi = require("@hapi/joi");
-
 const Quizzer = require("../model/Quizzer");
 
 const QuizzerController = {
   createQuizzer: async (req, res, next) => {
-    console.log(req.body);
     const { _id, name, email } = req.body;
+
     const quizzerSchema = Joi.object({
       _id: Joi.string().required(),
       name: Joi.string().required(),
       email: Joi.string().email().required(),
     });
 
-    
-    try {
-      const { error } = quizzerSchema.validate({ _id, name, email });
-      if (error) {
-        throw new Error(error.details[0].message);
+    const { error } = quizzerSchema.validate({ _id, name, email });
+    if (error) {
+      console.log("Validation error", error);
+    }
+    else{
+      try {
+        const quizzer = new Quizzer({
+          _id: _id,
+          name: name,
+          email: email,
+        });
+        const savedQuizzer = await quizzer.save();
+        return res.status(200).send(savedQuizzer);
+      } catch (err) {
+        console.log("Error", err);
+        return res.status(400).send("Does not exist.");
       }
-
-      const quizzer = new Quizzer({
-        _id,
-        name,
-        email,
-      });
-
-      const savedQuizzer = await quizzer.save();
-    } catch (err) {
-      console.log("Error", err);
     }
   },
 
   get: async (req, res, next) => {
     try {
-      console.log(req.param);
       const quizzer = await Quizzer.findOne({ _id: req.params.id });
       if (quizzer) {
         const {
@@ -44,7 +43,6 @@ const QuizzerController = {
           quizAttended,
           quizFlawless,
         } = quizzer;
-
         return res.status(200).send({
           _id,
           name,
@@ -83,10 +81,8 @@ const QuizzerController = {
   incrementParticipationCount: async (user_id, flawless) => {
     try {
       const quizzer = await Quizzer.findById(user_id);
-
       quizzer.quizAttended++;
       quizzer.quizFlawless += flawless; // + 0 or 1
-
       const updatedQuizzer = await Quizzer.findByIdAndUpdate(user_id, quizzer);
       // const result1 = await Quizzer.findByIdAndUpdate(user_id, {
       //   $inc: { quizAttended: 1 },
