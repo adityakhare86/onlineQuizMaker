@@ -20,7 +20,10 @@ router.post("/registration", async (req, res, next) => {
     console.log(user);
     if(user) {
       req.body = user;
+      console("Logging user body");
+      console.log(req.body);
       console.log("Creating quizzer");
+      console.log(req);
       await QuizzerController.createQuizzer(req, res, next);
     }
   } catch (err) {

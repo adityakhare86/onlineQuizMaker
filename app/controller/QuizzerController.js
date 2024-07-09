@@ -6,12 +6,15 @@ const QuizzerController = {
   createQuizzer: async (req, res, next) => {
     console.log("Quizzer creation in process");
     const { _id, name, email } = req.body;
+    console.log(_id); console.log(name); console.log(email);
 
     const quizzerSchema = Joi.object({
       _id: Joi.string().required(),
       name: Joi.string().required(),
       email: Joi.string().email().required(),
     });
+
+    console.log(_id); console.log(name); console.log(email);
 
     const { error } = quizzerSchema.validate({ _id, name, email });
     if (error) {
