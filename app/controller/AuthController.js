@@ -41,6 +41,7 @@ const AuthController = {
       const { _id } = savedUser;
 
       // send a successful response
+      console.log({_id, name, email});
       return res.status(201).send({ _id, name, email });
     } catch (err) {
       console.error(err);
