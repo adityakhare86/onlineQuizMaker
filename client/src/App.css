@@ -685,7 +685,7 @@ table {
 .go-to-login-reg-done{
   background-color: var(--quizcraft-light-blue);
   height: 4vh;
-  width: 6vw;
+  width: auto;
 }
 
 #add-question-button{
