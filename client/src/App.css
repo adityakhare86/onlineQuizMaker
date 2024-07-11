@@ -458,7 +458,7 @@ button:focus {
 }
 
 .remove-button {
-  width: 7vw;
+  width: auto;
   /* min-width: max-content; */
   height: max-content;
   background-color: var(--quizcraft-light-red);
@@ -479,7 +479,7 @@ button:focus {
 }
 
 .add-button {
-  width: 7vw;
+  width: auto;
   height: max-content;
   background-color: var(--quizcraft-light-green);
   border: none;
@@ -717,7 +717,7 @@ table {
 }
 
 .quiz-creator-container{
-  width: 65vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   background-color: var(--blue-grade2);
