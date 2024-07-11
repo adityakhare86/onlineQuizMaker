@@ -879,7 +879,7 @@ table {
   background-color: var(--quizcraft-orange);
   font-family: "Lexend Deca", sans-serif;
   padding: 0.5vh 0.5vw;
-  width: 9vw;
+  width: auto;
   height: min-content;
   align-items: center;
   justify-content: center;
@@ -930,4 +930,13 @@ table {
   margin-top: 1vh;
   margin-bottom: 2.5vh;
   padding-left: 10vw;
+}
+
+#go-to-dash-quiz-done{
+  background-color: var(--quizcraft-orange);
+  border-radius: 8px;
+}
+
+#go-to-dash-quiz-done:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }

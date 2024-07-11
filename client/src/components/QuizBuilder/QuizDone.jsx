@@ -105,7 +105,7 @@ const QuizDone = (props) => {
             }}
           >
             <Link to="/dashboard">
-              <span className="back-to-home ">
+              <span className="back-to-home" id="go-to-dash-quiz-done">
                 Go to Dashboard
               </span>
             </Link>

@@ -34,9 +34,9 @@ const QuizTaken = (props) => {
             Your response has been successfully submitted.
         </div>
             <Link to="/dashboard">
-              <span id="quiz-submit-go-to-dash">
+              <div id="quiz-submit-go-to-dash">
                 Go to Dashboard
-              </span>
+              </div>
             </Link>
       </div>
     </React.Fragment>
