@@ -636,7 +636,7 @@ table {
   margin-top: 12vh;
   background-color: var(--blue-grade2);
   width: 45vw;
-  height: 60vh;
+  height: auto;
   padding: 4vh 4vw 4vh 4vw;
   border-radius: 8px;
 }
