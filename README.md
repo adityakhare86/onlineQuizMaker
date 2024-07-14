@@ -1,7 +1,5 @@
 # QuizCraft
 
-![alt text](client/src/assets)
-
 ## Introduction
 
 A simple and minimalist quiz building and participating application. After building quiz, a quiz code will be generated for sharing. User can participate in the quiz with this code.
@@ -42,40 +40,41 @@ A simple and minimalist quiz building and participating application. After build
 
 A minimal landing page
 
-![image](https://user-images.githubusercontent.com/14056189/90796666-6a077e00-e331-11ea-9bd8-0f11fee7327a.png)
+![landing](https://github.com/user-attachments/assets/e72bb4d8-1336-48dd-a181-c6c809d6964a)
 
 ### Dashboard
 
 List of quizzes created by the user is listed here with sharable codes. User can both build and attend quizzes. Can see statistics of him/herself and for every quizzes curated by him/her.
 
-![image](https://user-images.githubusercontent.com/14056189/90793239-4cd0b080-e32d-11ea-9b53-5abeda39eacd.png)
+![dashboard](https://github.com/user-attachments/assets/070f4632-74cc-43f9-842a-74611e9639ad)
 
 ### Quiz Builder
 
 User can add questions and for every question, indefinite number of options can be added. One of the option has to be selected as correct answer.
 
-![image](https://user-images.githubusercontent.com/14056189/90796903-be126280-e331-11ea-9143-8f88e3d393d3.png)
+![quiz-builder](https://github.com/user-attachments/assets/d2e055b4-76d3-42a7-a487-971b778310f6)
 
 ### Quiz Code
 
 User will see this page after creating a quiz successfully.
 
-![image](https://user-images.githubusercontent.com/14056189/90799507-244cb480-e335-11ea-99cb-0e0f07cd938c.png)
+![quiz created](https://github.com/user-attachments/assets/d25b722c-f17a-425d-bcda-82b720a1e6a9)
 
 ### Find Quiz
 
 User can paste quiz code to find quiz. The quiz title and description will be shown if found.
 
-![image](https://user-images.githubusercontent.com/14056189/90797055-ef8b2e00-e331-11ea-93c2-bbbe9020b60a.png)
+![find quiz](https://github.com/user-attachments/assets/b826f30c-2ade-4bfa-b912-b9926aa050c2)
 
 ### Quiz Taker
 
 User can take the quiz after finding it using the code. Similar to the building interface, but nothing can be edited here. User can only select the options.
 
-![image](https://user-images.githubusercontent.com/14056189/90797191-22cdbd00-e332-11ea-8486-92146ac15398.png)
+![quiz taker](https://github.com/user-attachments/assets/e786968d-2111-4b89-8cc4-1c333e6bcef5)
 
 ## Quiz Result
 
 User will see this page after taking a quiz successfully. The attendance count will increase by one. And the perfect score count will be increased by one if they answer all correctly.
 
-![image](https://user-images.githubusercontent.com/14056189/90799678-61b14200-e335-11ea-95a9-420f9b10c796.png)
+![quiz done](https://github.com/user-attachments/assets/5f56a530-504e-46b8-81db-100b1ccd0c6c)
+
