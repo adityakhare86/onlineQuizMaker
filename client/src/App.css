@@ -935,6 +935,7 @@ table {
 #go-to-dash-quiz-done{
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
+  padding: 1vh 1vw;
 }
 
 #go-to-dash-quiz-done:hover{
