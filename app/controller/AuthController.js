@@ -4,6 +4,8 @@ const jwt = require("jsonwebtoken");
 
 // database schema
 const User = require("../model/User");
+const Quizzer = require("../model/Quizzer");
+
 
 const AuthController = {
   // validation schema
@@ -37,11 +39,43 @@ const AuthController = {
       });
       const savedUser = await user.save();
       const { _id } = savedUser;
+<<<<<<< HEAD
       // send a successful response
       return { _id, name, email }; // return user details instead of modifying req.body
     } catch (err) {
       console.error(err);
       return res.status(400).send("Invalid data given.");
+=======
+
+      const quizzerRegistrationSchema = Joi.object({
+        _id: Joi.string().required(),
+        name: Joi.string().required(),
+        email: Joi.string().email().required(),
+      });
+  
+      const { error2 } = quizzerRegistrationSchema.validate({ _id, name, email });
+      if (error2) {
+        console.error("Quizzer couldn't be validated", error2);
+        return res.status(408).send("Quizzer couldn't be validated");
+      }
+      try {
+        const quizzer = new Quizzer({
+          _id: _id,
+          name: name,
+          email: email,
+        });
+        const savedQuizzer = await quizzer.save();
+        console.log("Quizzer saved successfully:", savedQuizzer);
+      } catch (err) {
+        console.error("Quizzer creation error: ", err);
+        return res.status(409).send("Quizzer couldn't be created");
+      }
+
+      // send a successful response
+      return res.status(201).send("user and quizzer created successfully");
+    } catch (err) {
+      return res.status(500).send("Internal Server Error");
+>>>>>>> test
     }
   },
   loginUser: async (req, res, next) => {

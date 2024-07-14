@@ -1,6 +1,6 @@
 # QuizCraft
 
-![qq](https://user-images.githubusercontent.com/14056189/90792874-d92ea380-e32c-11ea-855d-0c604f2ea20b.PNG)
+![alt text](client/src/assets)
 
 ## Introduction
 

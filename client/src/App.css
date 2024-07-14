@@ -643,8 +643,7 @@ table {
   margin-bottom: 6vh;
   background-color: var(--blue-grade2);
   width: 45vw;
-  /* height: 60vh; */
-  min-height: max-content;
+  height: auto;
   padding: 4vh 4vw 4vh 4vw;
   border-radius: 8px;
 }
@@ -941,30 +940,12 @@ table {
   padding-left: 10vw;
 }
 
-#looks-like-mistake-text{
-  display: flex;
-  flex-direction: column;
-  color: red;
-  padding: 2vh 2vw;
-  padding-bottom: 0;
-}
-
 #go-to-dash-quiz-done{
-  color: var(--black);
   background-color: var(--quizcraft-orange);
   border-radius: 8px;
   padding: 1vh 1vw;
-  width: auto;
 }
 
-.go-to-dash-quiz-done{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4vh;
-}
-
-#curated-quiz-list-table{
-  border-spacing: 0;
-  border-color: var(--blue-grade2);
+#go-to-dash-quiz-done:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
