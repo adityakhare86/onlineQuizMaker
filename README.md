@@ -1,7 +1,5 @@
 # QuizCraft
 
-![alt text](client/src/assets)
-
 ## Introduction
 
 A simple and minimalist quiz building and participating application. After building quiz, a quiz code will be generated for sharing. User can participate in the quiz with this code.
@@ -42,7 +40,8 @@ A simple and minimalist quiz building and participating application. After build
 
 A minimal landing page
 
-![image](https://user-images.githubusercontent.com/14056189/90796666-6a077e00-e331-11ea-9bd8-0f11fee7327a.png)
+![image](https://github.com/user-attachments/assets/e37f713a-f001-42ed-86d5-08711d0976d1)
+
 
 ### Dashboard
 
