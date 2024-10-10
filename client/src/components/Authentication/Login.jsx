@@ -31,6 +31,7 @@ class Login extends Component {
         if (response === false) {
           this.setState({ error: true });
         } else {
+          console.log(response);
           sessionStorage.setItem("quizcraft-authToken", response.authToken);
           sessionStorage.setItem("quizcraft-user-id", response._id);
 
