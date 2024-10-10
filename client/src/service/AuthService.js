@@ -16,6 +16,7 @@ const AuthService = {
     return await axios
       .post("https://quiz-craft-be.vercel.app"+"/api/v1/auth/login", request)
       .then((response) => {
+        console.log(response);
         const authToken = response.headers["auth-token"];
         sessionStorage.setItem("quizcraft-authToken", authToken);
         return { ...response.data, authToken };
