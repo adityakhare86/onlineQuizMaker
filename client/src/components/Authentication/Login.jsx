@@ -26,26 +26,27 @@ class Login extends Component {
   handleLoginSubmit = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    AuthService.login({ email, password }).then((response) => {
-      if (response === false) {
-        this.setState({ error: true });
-      } else {
-        sessionStorage.setItem("quizcraft-authToken", response.authToken);
-        sessionStorage.setItem("quizcraft-user-id", response._id);
+    AuthService.login({ email, password })
+      .then((response) => {
+        if (response === false) {
+          this.setState({ error: true });
+        } else {
+          sessionStorage.setItem("quizcraft-authToken", response.authToken);
+          sessionStorage.setItem("quizcraft-user-id", response._id);
 
-        // get Quizzer profile
-        QuizzerService.getQuizzer(response._id, response.authToken).then(
-          (response) => {
-            if (response === false) {
-              this.setState({ error: true });
-            } else {
-              this.props.onLogin(response);
-              this.props.history.push("/dashboard");
+          // get Quizzer profile
+          QuizzerService.getQuizzer(response._id, response.authToken).then(
+            (response) => {
+              if (response === false) {
+                this.setState({ error: true });
+              } else {
+                this.props.onLogin(response);
+                this.props.history.push("/dashboard");
+              }
             }
-          }
-        );
-      }
-    });
+          );
+        }
+      });
   };
 
   render() {
@@ -63,7 +64,7 @@ class Login extends Component {
         <div className="container-fluid login-container-fluid">
           <div className="login-another-container">
             <div className="auth-title login-text-login">Login</div>
-            <form   onSubmit={this.handleLoginSubmit}>
+            <form onSubmit={this.handleLoginSubmit}>
               <div className="form-group login-form-container">
                 {/* email */}
                 <label className="input-label" htmlFor="inputEmail">

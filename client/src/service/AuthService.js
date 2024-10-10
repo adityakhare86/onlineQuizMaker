@@ -17,7 +17,7 @@ const AuthService = {
       .post("https://quiz-craft-be.vercel.app"+"/api/v1/auth/login", request)
       .then((response) => {
         const authToken = response.headers["auth-token"];
-        sessionStorage.setItem("quizcraft-token", authToken);
+        sessionStorage.setItem("quizcraft-authToken", authToken);
         return { ...response.data, authToken };
       })
       .catch((err) => {
